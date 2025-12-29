@@ -1,7 +1,7 @@
 function ExploreNewPlaces(){
     return(
         <main>
-            hello
+            helloo
         </main>
     );
 }
