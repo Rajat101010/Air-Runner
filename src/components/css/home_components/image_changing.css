@@ -1,34 +1,36 @@
 .slider_container {
-  width: 100%;
-  overflow: hidden;
+    width: 100%;
+    overflow: hidden;
 }
 
 /* Image */
 .slider_image {
-  width: 100%;
-  height: auto;              /* natural height */
-  display: block;
-  opacity: 1;
-  transition: opacity 0.3s ease-in-out;
+    width: 100%;
+    height: auto;
+    /* natural height */
+    display: block;
+    opacity: 1;
+    transition: opacity 300ms ease-in-out;
 }
 
 /* Fade states */
 .fade-in {
-  opacity: 1;
+    opacity: 1;
 }
 
 .fade-out {
-  opacity: 0;
+    opacity: 0;
 }
 
 /* 📱 Mobile: center 80% visible */
 @media (max-width: 768px) {
-  .slider_container {
-    display: flex;
-    justify-content: center;
-  }
+    .slider_container {
+        display: flex;
+        justify-content: center;
+    }
 
-  .slider_image {
-    width: 155%; /* show only center 80% */
-  }
+    .slider_image {
+        width: 155%;
+        /* show only center 80% */
+    }
 }
