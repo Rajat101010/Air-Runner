@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+.font_app_name {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #053478;
+}
+
+.font_for_app_name_menu {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.8rem;
+    color: #053478;
+}
+
+@media(max-width: 768px) {
+    .font_for_app_name_menu {
+        font-family: 'Inter', sans-serif;
+        font-size: 1.3rem;
+    }
+}
+
+.font_for_icons {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #6A9FE0;
+}
+
+.font_for_icons_active {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #053478;
+}
+
+.font_for_icons:hover {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #2466B3;
+}
+
+.footer_item_font {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: #6A9FE0;
+}
+
+.footer_item_font:hover {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: #2466B3;
+}
+
+.footer_item_font_active {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #053478;
+}
+
+.install_font {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #053478;
+}
+
+.font_for_login {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: white;
+}
+
+.font_for_signup {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.action_bar_font {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #053478;
+}
+
+.action_bar_font:hover {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #6A9FE0;
+}
+
+.no_gift_font {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #053478;
+}
+
+.home_page_offer_title_font {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #053478;
+}
+
+.home_page_offer_description_font {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #6A9FE0;
+}
+
+.home_page_offer_shortcut_view_more_font {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #2466B3;
+}
+
+.home_page_offer_shortcut_view_more_font:hover {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #6A9FE0;
+}

@@ -1,24 +1,39 @@
-import logo from './logo.svg';
 import './App.css';
+import React from "react";
+
+//routers(page changing)
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+//assets
+import './assets/fonts.css';
+
+//bus-pages
+import Home from './main_pages/home/home';
+import Flights from './main_pages/flights/flights';
+import Offers from './main_pages/offers/offers';
+import Status from './main_pages/status/status';
+import Holiday from './main_pages/holiday/holiday';
+import EliteCard from './main_pages/elite-card/elite-card';
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main>
+
+      <Router>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/flights' element={<Flights />} />
+          <Route path='/offers' element={<Offers />} />
+          <Route path='/status' element={<Status />} />
+          <Route path='/holiday' element={<Holiday />} />
+          <Route path='/elite-card' element={<EliteCard />} />
+
+          {/* <Route path="/days" element={<Navigate to={`/${days}`} />} /> */}
+        </Routes>
+      </Router>
+
+    </main>
   );
 }
 

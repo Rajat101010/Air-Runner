@@ -1,0 +1,181 @@
+.offer_and_holiday_parent {
+    margin: -2.95rem 5rem 1rem;
+    padding: 1.1rem 0rem;
+    border-radius: 18px;
+    background-color: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 768px) {
+    .offer_and_holiday_parent {
+        margin: -2.35rem 0.5rem 1rem;
+        padding: 0.7rem 0rem;
+    }
+}
+
+.offer_and_holiday_title {
+    display: flex;
+    justify-content: space-around;
+}
+
+.offer_and_holiday_title>div {
+    flex: 1;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* Default tab */
+.offer_and_holiday_title>div font {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #6A9FE0;
+}
+
+.offer_and_holiday_title>div font:hover {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #2466B3;
+}
+
+/* Selected tab */
+.offer_and_holiday_title>div.active_tab font {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #053478;
+}
+
+.offer_and_holiday_title>div.active_tab {
+    border-bottom: 2px solid #053478;
+    padding-bottom: 0.55rem;
+}
+
+@media (max-width: 768px) {
+    .offer_and_holiday_title>div.active_tab {
+        border-bottom: 2px solid #053478;
+        padding-bottom: 0.35rem;
+    }
+}
+
+.offer_and_holiday_content {
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 130px;
+    padding-top: 1rem;
+}
+
+.offer_and_holiday_title_individual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.offer_and_holiday_icons_individual svg {
+    display: block;
+    /* prevents baseline behavior */
+}
+
+.home_page_offer_shortcut {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    gap: 20px;
+}
+
+.home_page_offer_shortcut_individual {
+    padding: 1rem;
+    border-radius: 18px;
+    border: 1px dashed black;
+    width: 30%;
+    gap: 20px;
+
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: transform 0.25s ease-in-out;
+    will-change: transform;
+    animation: offerandholidayimage 0.4s ease-in-out forwards;
+}
+
+@keyframes offerandholidayimage {
+    from {
+        transform: translateX(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .home_page_offer_shortcut_individual {
+        padding: 0rem;
+        border: none;
+        justify-content: center;
+    }
+}
+
+.home_page_offer_shortcut_individual:hover {
+    transform: scale(1.04);
+
+}
+
+.home_page_offer_shortcut_pic {
+    width: 80px;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .home_page_offer_shortcut_pic {
+        width: 90px;
+    }
+}
+
+.home_page_offer_shortcut_description {
+    display: grid;
+    gap: 3px;
+}
+
+@media (max-width: 768px) {
+    .home_page_offer_shortcut_description {
+        display: none;
+    }
+}
+
+.truncate-2 {
+    margin: 0;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+
+    /* standard (for future support) */
+    line-clamp: 2;
+}
+
+.home_page_offer_shortcut_view_more {
+    padding-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home_page_offer_shortcut_view_more svg {
+    display: block;
+}

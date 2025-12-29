@@ -1,0 +1,150 @@
+.header_parent {
+    background-color: #FFFDF7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0.8rem 2rem;
+    box-shadow: 0px 0px 4px #2E2E2E;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    box-sizing: border-box;   /* 🔥 prevents overflow */
+
+    z-index: 5;
+}
+
+
+@media(max-width: 768px) {
+    .header_parent {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-bottom: 0.4rem;
+        padding-top: 0.4rem;
+    }
+}
+
+
+.header_icons {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+
+.header_icons_pages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.header_icons_pages svg {
+    display: block;
+    /* prevents baseline behavior */
+}
+
+@media(max-width: 768px) {
+    .header_icons_pages {
+        display: none;
+    }
+}
+
+.logo_header {
+    height: 2rem;
+}
+
+.header_app_name {
+    gap: 10px;
+    display: flex;
+    align-items: center;
+}
+
+
+.icon_and_name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon_and_name svg {
+    display: block;
+    /* prevents baseline behavior */
+}
+
+.header_icons_individual{
+    padding-top: 0rem;
+}
+
+
+
+
+
+
+
+
+
+
+.menu_icon {
+    display: flex;
+    align-items: center;
+    /* 🔥 vertical center */
+    justify-content: center;
+    cursor: pointer;
+}
+
+.menu_icon svg {
+    display: block;
+    /* prevents baseline behavior */
+}
+
+/* Full-height side menu */
+.menu_panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    width: 25vw;
+    height: 100vh;
+
+    background-color: #F2F7FF;
+    z-index: 999;
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    animation: slideInFromLeft 0.2s ease-out forwards;
+}
+
+@media(max-width: 768px) {
+    .menu_panel {
+        width: 70vw;
+    }
+}
+
+/* Animation */
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(100%);
+        opacity: 0.3;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+.overlay_title {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+}

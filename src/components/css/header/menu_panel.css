@@ -1,0 +1,218 @@
+.menu_panel_separate_main {
+    /* background-color: blue; */
+    margin: 1rem 2rem;
+    height: 100vh;
+}
+
+@media(max-width: 768px) {
+    .menu_panel_separate_main {
+        margin: 0.8rem 1rem;
+        height: 100vh;
+    }
+}
+
+.account_and_close_icon {
+    /* background-color: bisque; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.account_and_close_icon svg {
+    display: block;
+    /* prevents baseline behavior */
+}
+
+@media(max-width: 768px) {
+    .close_icon {
+        margin-bottom: 1rem;
+    }
+}
+
+.install_the_app {
+    position: fixed;
+    left: 0;
+    right: 0;
+
+    top: calc(100dvh - 60px);
+    /* 🔥 dynamic viewport */
+    height: 80px;
+
+    background-color: #D7E9FB;
+    padding: 1.2rem 0;
+
+    width: 100%;
+    box-sizing: border-box;
+
+    z-index: 1000;
+}
+
+.download_install_icon_parent {
+    display: flex;
+    justify-content: center;
+    user-select: none;
+    -webkit-user-select: none;
+    /* Safari */
+    -ms-user-select: none;
+}
+
+.download_install_icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.download_install_icon svg {
+    display: block;
+    /* prevents baseline behavior */
+}
+
+.login_and_signup_ui {
+    margin-top: 1rem;
+    /* background-color: beige; */
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.login {
+    background-color: #053478;
+    border: 2px solid #053478;
+    padding: 0.3rem 1rem 0.3rem;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    width: 3.5rem;
+}
+
+.login:hover{
+    background-color: #6A9FE0;
+    border: 2px solid #6A9FE0;
+}
+
+.signup {
+    padding: 0.3rem 1rem 0.3rem;
+    border: 2px solid #053478;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    width: 3.5rem;
+    color: #053478;
+}
+
+.signup:hover{
+    background-color: #6A9FE0;
+    border: 2px solid #6A9FE0;
+    color: white;
+}
+
+.action_bar_icons_and_name {
+    display: block;
+    margin-top: 1rem;
+    /* background-color: bisque; */
+}
+
+.action_bar_icons_and_name_individual {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    border-bottom: 1px solid #95C2EE;
+    cursor: pointer;
+    /* background-color: blanchedalmond; */
+}
+
+.link_fix {
+    border-bottom: 1px solid #95C2EE;
+}
+
+.link_fix:last-child {
+    border-bottom: none;
+}
+
+.link_fix_no_mobile {
+    border-bottom: 1px solid #95C2EE;
+}
+
+@media(max-width: 768px) {
+    .link_fix_no_laptop {
+        border-bottom: 1px solid #95C2EE;
+    }
+
+    .link_fix_no_mobile {
+        border-bottom: 0px solid #95C2EE;
+    }
+}
+
+.action_bar_icons_and_name_individual_no_display {
+    display: none;
+}
+
+@media(max-width: 768px) {
+    .action_bar_icons_and_name_individual_no_display {
+        display: flex;
+    }
+
+    .action_bar_icons_and_name_individual_no_display_in_mobile {
+        display: none;
+    }
+}
+
+
+.action_bar_icons_and_name_individual:last-child {
+    border-bottom: none;
+}
+
+.action_bar_icons_and_name_individual_no_arrow {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    /* background-color:bisque; */
+}
+
+.gift_icon {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.gift_popup {
+    position: fixed;
+    bottom: 150px;
+    /* above bottom bar */
+    left: 50%;
+    transform: translateX(-50%);
+
+    background-color: #F2F7FF;
+    color: #053478;
+    padding: 10px 16px;
+    border-radius: 8px;
+
+    text-align: center;
+
+    font-size: 14px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+
+    animation: popupFade 0.2s ease-out;
+    z-index: 2000;
+    width: 180px;
+}
+
+@media(max-width: 768px) {
+    .gift_popup {
+        width: 200px;
+    }
+}
+
+@keyframes popupFade {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
