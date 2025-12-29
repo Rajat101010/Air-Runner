@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useRef } from "react";
 import "../../../components/css/home_components/image_changing.css";
 
 import image_1 from "../../../assets/changing_image_in_home/1.webp";
@@ -10,43 +10,41 @@ import image_5 from "../../../assets/changing_image_in_home/5.webp";
 const images = [image_1, image_2, image_3, image_4, image_5];
 
 export default function ImageSlider() {
-    const [index, setIndex] = useState(0);
-    const trackRef = useRef(null);
+    const sliderRef = useRef(null);
+    const indexRef = useRef(1); // start from first real slide
+    const transitionDuration = 1000; // ms
+    const displayDuration = 3000; // ms
 
-    // Clone first image at the end for seamless loop
-    const slides = [...images, images[0]];
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setIndex((prev) => prev + 1);
-        }, 3000);
-
-        return () => clearInterval(interval);
-    }, []);
+    // Add clones for seamless infinite effect
+    const extendedImages = [images[images.length - 1], ...images, images[0]];
 
     useEffect(() => {
-        if (!trackRef.current) return;
+    const slider = sliderRef.current;
 
-        const track = trackRef.current;
+    slider.style.transform = `translateX(-100vw)`;
 
-        // Animate slide
-        track.style.transition = "transform 0.9s ease-in-out";
-        track.style.transform = `translateX(-${index * 100}vw)`;
+    const interval = setInterval(() => {
+        indexRef.current += 1;
+        slider.style.transition = `transform ${transitionDuration}ms ease-in-out`;
+        slider.style.transform = `translateX(-${indexRef.current * 100}vw)`;
 
-        // When reaching the cloned slide, jump back to first slide instantly
-        if (index === slides.length - 1) {
-            setTimeout(() => {
-                track.style.transition = "none";
-                track.style.transform = "translateX(0)";
-                setIndex(0);
-            }, 900); // match transition duration
-        }
-    }, [index, slides.length]);
+        setTimeout(() => {
+            if (indexRef.current === extendedImages.length - 1) {
+                slider.style.transition = "none";
+                indexRef.current = 1;
+                slider.style.transform = `translateX(-100vw)`;
+            }
+        }, transitionDuration);
+    }, displayDuration);
+
+    return () => clearInterval(interval);
+}, [extendedImages.length]);
+
 
     return (
         <div className="fullscreen_slider">
-            <div className="slider_track" ref={trackRef} style={{ display: "flex", width: `${slides.length * 100}vw` }}>
-                {slides.map((img, i) => (
+            <div className="slider_track" ref={sliderRef}>
+                {extendedImages.map((img, i) => (
                     <div className="slide" key={i}>
                         <img src={img} alt={`slide-${i}`} />
                     </div>
