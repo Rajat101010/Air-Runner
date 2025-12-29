@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import "../../../components/css/home_components/image_changing.css";
 
-import image_1 from "../../../assets/changing_image_in_home/1.jpg";
-import image_2 from "../../../assets/changing_image_in_home/2.jpg";
-import image_3 from "../../../assets/changing_image_in_home/3.jpg";
-import image_4 from "../../../assets/changing_image_in_home/4.jpg";
-import image_5 from "../../../assets/changing_image_in_home/5.jpg";
+import image_1 from "../../../assets/changing_image_in_home/1.webp";
+import image_2 from "../../../assets/changing_image_in_home/2.webp";
+import image_3 from "../../../assets/changing_image_in_home/3.webp";
+import image_4 from "../../../assets/changing_image_in_home/4.webp";
+import image_5 from "../../../assets/changing_image_in_home/5.webp";
 
 const images = [image_1, image_2, image_3, image_4, image_5];
 
@@ -20,7 +20,7 @@ export default function ImageSlider() {
       setTimeout(() => {
         setIndex((prev) => (prev + 1) % images.length);
         setFade(true);
-      }, 200); // fade duration
+      }, 300); // fade duration
     }, 3000); //image duration
 
     return () => clearInterval(interval);
