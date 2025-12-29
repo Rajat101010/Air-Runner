@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import "../../../components/css/home_components/offer_and_holiday.css";
 
-import img_1 from '../../../assets/offers_pictures/1.jpeg';
+import img_1 from '../../../assets/offers_pictures/1.webp';
 
 import { MdLocalOffer } from "react-icons/md";
 import { FaSuitcaseRolling } from "react-icons/fa6";

@@ -13,7 +13,7 @@ import { RiVipCrown2Fill } from "react-icons/ri";
 
 import MenuPannel from './features/menu_pannel';
 
-import LogoTransparent from '../../../assets/pictures/logo_transparent.png'
+import LogoTransparent from '../../../assets/pictures/logo_transparent.webp'
 
 function HomeHeader() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
