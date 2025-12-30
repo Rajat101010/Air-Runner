@@ -285,14 +285,32 @@ medium
 
 .home_title_font {
     font-family: 'Inter', sans-serif;
-    font-size: 1.2rem;
+    font-size: 2rem;
     font-weight: 800;
     color: #053478;
 }
 
+@media (max-width: 768px){
+.home_title_font {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #053478;
+}
+}
+
+.home_description_font {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #6A9FE0;
+}
+
+@media (max-width: 768px){
 .home_description_font {
     font-family: 'Inter', sans-serif;
     font-size: 0.9rem;
     font-weight: 400;
     color: #6A9FE0;
+}
 }

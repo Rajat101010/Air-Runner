@@ -258,7 +258,7 @@ function OfferAndHoliday() {
                                             {HomePage_Offer_title_1}
                                         </font>
                                         <font className='home_page_offer_description_font'>
-                                            <p class="truncate-2">
+                                            <p class="truncate-2 home_page_offer_paragraph_home">
                                                 {HomePage_Offer_description_1}
                                             </p>
                                         </font>
@@ -281,7 +281,7 @@ function OfferAndHoliday() {
                                             {HomePage_Offer_title_2}
                                         </font>
                                         <font className='home_page_offer_description_font'>
-                                            <p class="truncate-2">
+                                            <p class="truncate-2 home_page_offer_paragraph_home">
                                                 {HomePage_Offer_description_2}
                                             </p>
                                         </font>
@@ -304,7 +304,7 @@ function OfferAndHoliday() {
                                             {HomePage_Offer_title_3}
                                         </font>
                                         <font className='home_page_offer_description_font'>
-                                            <p class="truncate-2">
+                                            <p class="truncate-2 home_page_offer_paragraph_home">
                                                 {HomePage_Offer_description_3}
                                             </p>
                                         </font>
@@ -391,7 +391,7 @@ function OfferAndHoliday() {
                                                     {HomePage_Offer_title_1}
                                                 </font>
                                                 <font className='home_page_offer_description_font'>
-                                                    <p class="truncate-2">
+                                                    <p class="truncate-2 home_page_offer_paragraph">
                                                         {HomePage_Offer_description_1}
                                                     </p>
                                                 </font>
@@ -473,7 +473,7 @@ function OfferAndHoliday() {
                                                     {HomePage_Offer_title_2}
                                                 </font>
                                                 <font className='home_page_offer_description_font'>
-                                                    <p class="truncate-2">
+                                                    <p class="truncate-2 home_page_offer_paragraph">
                                                         {HomePage_Offer_description_2}
                                                     </p>
                                                 </font>
@@ -555,7 +555,7 @@ function OfferAndHoliday() {
                                                     {HomePage_Offer_title_3}
                                                 </font>
                                                 <font className='home_page_offer_description_font'>
-                                                    <p class="truncate-2">
+                                                    <p class="truncate-2 home_page_offer_paragraph">
                                                         {HomePage_Offer_description_3}
                                                     </p>
                                                 </font>
@@ -598,7 +598,7 @@ function OfferAndHoliday() {
                                             {HomePage_Holiday_title_1}
                                         </font>
                                         <font className='home_page_offer_description_font'>
-                                            <p class="truncate-2">
+                                            <p class="truncate-2 home_page_offer_paragraph_home">
                                                 {HomePage_Holiday_description_1}
                                             </p>
                                         </font>
@@ -618,7 +618,7 @@ function OfferAndHoliday() {
                                             {HomePage_Holiday_title_2}
                                         </font>
                                         <font className='home_page_offer_description_font'>
-                                            <p class="truncate-2">
+                                            <p class="truncate-2 home_page_offer_paragraph_home">
                                                 {HomePage_Holiday_description_2}
                                             </p>
                                         </font>
@@ -638,7 +638,7 @@ function OfferAndHoliday() {
                                             {HomePage_Holiday_title_3}
                                         </font>
                                         <font className='home_page_offer_description_font'>
-                                            <p class="truncate-2">
+                                            <p class="truncate-2 home_page_offer_paragraph_home">
                                                 {HomePage_Holiday_description_3}
                                             </p>
                                         </font>
@@ -679,7 +679,7 @@ function OfferAndHoliday() {
                                                     {HomePage_Holiday_title_1}
                                                 </font>
                                                 <font className='home_page_offer_description_font'>
-                                                    <p class="truncate-2">
+                                                    <p class="truncate-2 home_page_offer_paragraph">
                                                         {HomePage_Holiday_description_1}
                                                     </p>
                                                 </font>
@@ -737,7 +737,7 @@ function OfferAndHoliday() {
                                                     {HomePage_Holiday_title_2}
                                                 </font>
                                                 <font className='home_page_offer_description_font'>
-                                                    <p class="truncate-2">
+                                                    <p class="truncate-2 home_page_offer_paragraph">
                                                         {HomePage_Holiday_description_2}
                                                     </p>
                                                 </font>
@@ -795,7 +795,7 @@ function OfferAndHoliday() {
                                                     {HomePage_Holiday_title_3}
                                                 </font>
                                                 <font className='home_page_offer_description_font'>
-                                                    <p class="truncate-2">
+                                                    <p class="truncate-2 home_page_offer_paragraph">
                                                         {HomePage_Holiday_description_3}
                                                     </p>
                                                 </font>

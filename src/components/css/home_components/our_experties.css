@@ -26,3 +26,8 @@
 .our_expertise_title_title svg{
     display: block;
 }
+
+.our_expertise_description_paragraph{
+    line-height: 22px;
+    padding-top: 5px;
+}

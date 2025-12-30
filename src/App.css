@@ -27,25 +27,24 @@ body {
   }
 }
 
-.icon{
+.icon {
   /* padding-top: 0.2rem; */
-  display:inline;
+  display: inline;
   /* justify-content: center; */
   align-items: center;
 }
 
 .icon svg {
-    display: block;
-    /* prevents baseline behavior */
+  display: block;
+  /* prevents baseline behavior */
 }
 
 .truncate-2 {
-    margin: 0;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-
-    /* standard (for future support) */
-    line-clamp: 2;
+  margin: 0;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  /* line-height: 20px; */
 }

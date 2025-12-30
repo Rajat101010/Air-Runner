@@ -22,7 +22,7 @@ function OurExpertise() {
                         </div>
                     </font>
                     <font className='home_description_font'>
-                        <p className="truncate-2">
+                        <p className="truncate-2 our_expertise_description_paragraph">
                             {OurExpertise_Description}
                         </p>
                     </font>
