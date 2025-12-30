@@ -1,5 +1,5 @@
 .fullscreen_slider {
-    width: 100vw;
+    width: 100%;
     overflow: hidden;
     position: relative;
 }

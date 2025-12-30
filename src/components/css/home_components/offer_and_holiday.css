@@ -157,19 +157,8 @@
     }
 }
 
-.truncate-2 {
-    margin: 0;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-
-    /* standard (for future support) */
-    line-clamp: 2;
-}
-
 .home_page_offer_shortcut_view_more {
-    padding-top: 1rem;
+    padding-top: 0.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -177,4 +166,184 @@
 
 .home_page_offer_shortcut_view_more svg {
     display: block;
+}
+
+
+
+
+
+
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    align-items: center;
+    /* vertical center */
+    justify-content: center;
+    /* horizontal center */
+    z-index: 9999;
+    pointer-events: all;
+}
+
+.mini_screen {
+    background: white;
+    width: 100%;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+
+    margin: 5rem;
+    border-radius: 18px;
+
+    padding: 4rem;
+}
+
+@media (max-width: 768px) {
+    .mini_screen {
+        margin: 0.5rem;
+        padding: 1rem 1rem 2rem 1rem;
+        width: auto;
+    }
+}
+
+.offer_mini_screen_parent {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 2rem;
+}
+
+@media (max-width: 768px) {
+    .offer_mini_screen_parent {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        gap: 0rem;
+        flex-direction: column;
+    }
+}
+
+.home_page_offer_shortcut_pic_mini_page {
+    width: 400px;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .home_page_offer_shortcut_pic_mini_page {
+        width: 0px;
+    }
+}
+
+.offer_mini_screen_description {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 400px;
+    width: 100%;
+    padding: 0rem 2rem;
+}
+
+@media (max-width: 768px) {
+    .offer_mini_screen_description {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        height: 300px;
+        width: auto;
+        padding: 0rem 1rem;
+    }
+}
+
+.offer_mini_screen_location_info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.offer_mini_screen_location_info_from_to {
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+}
+
+.offer_mini_screen_location_info_plane_image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+@media (max-width: 768px) {
+    .offer_mini_screen_location_info_plane_image {
+        display: none;
+    }
+}
+
+.ticket_like_plane_arrow {
+    width: 80%;
+}
+
+.bg_container {
+    width: 100%;
+    /* min-height: 100vh; */
+    background-image: url("../../../assets/ticket_like/2.webp");
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+@media (max-width: 768px) {
+    .bg_container {
+        background-size: 100%;
+    }
+}
+
+.offer_mini_screen_buttons {
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .offer_mini_screen_buttons {
+        justify-content: center;
+    }
+}
+
+.offer_mini_screen_buttons_individual {
+    background-color: #6A9FE0;
+    color: white;
+    border-radius: 8px;
+    padding: 0.8rem;
+    width: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .offer_mini_screen_buttons_individual {
+        width: 5.3rem;
+    }
+}
+
+.offer_mini_screen_buttons_individual:hover {
+    background-color: #053478;
+    color: white;
+}
+
+
+.holiday_mini_screen_discount_code{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    height: 250px;
+}
+
+.holiday_mini_screen_discount_code_individual{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }

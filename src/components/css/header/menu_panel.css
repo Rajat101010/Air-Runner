@@ -127,12 +127,27 @@
     border-bottom: 1px solid #95C2EE;
 }
 
+.link_fix svg {
+    display: block;
+    /* prevents baseline behavior */
+}
+
 .link_fix:last-child {
     border-bottom: none;
 }
 
 .link_fix_no_mobile {
     border-bottom: 1px solid #95C2EE;
+}
+
+.link_fix_no_mobile svg {
+    display: block;
+    /* prevents baseline behavior */
+}
+
+.link_fix_no_laptop svg {
+    display: block;
+    /* prevents baseline behavior */
 }
 
 @media(max-width: 768px) {

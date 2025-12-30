@@ -1,0 +1,28 @@
+.our_expertise_parent {
+    /* background-color: bisque; */
+    margin: 3rem 5rem;
+}
+
+@media (max-width: 768px) {
+    .our_expertise_parent {
+        margin: 2rem 0.5rem;
+    }
+}
+
+.our_expertise_title {
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.our_expertise_title_title{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: row;
+}
+
+.our_expertise_title_title svg{
+    display: block;
+}

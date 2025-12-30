@@ -38,3 +38,14 @@ body {
     display: block;
     /* prevents baseline behavior */
 }
+
+.truncate-2 {
+    margin: 0;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+
+    /* standard (for future support) */
+    line-clamp: 2;
+}
