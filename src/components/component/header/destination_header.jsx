@@ -1,13 +1,14 @@
 import '../../css/header/header.css'
 import '../../css/header/menu_panel.css'
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 
 import { AiOutlineMenu } from "react-icons/ai";
 import { AiFillHome } from "react-icons/ai";
 import { PiAirplaneFill } from "react-icons/pi";
 import { MdLocalOffer } from "react-icons/md";
-import { MdAirplaneTicket } from "react-icons/md";
+// import { MdAirplaneTicket } from "react-icons/md";
+import { MdMyLocation } from "react-icons/md";
 import { FaSuitcaseRolling } from "react-icons/fa6";
 import { RiVipCrown2Fill } from "react-icons/ri";
 
@@ -16,15 +17,26 @@ import MenuPannel from './features/menu_pannel';
 import LogoTransparent from '../../../assets/pictures/logo_transparent.webp'
 
 function HomeHeader() {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [menu_panel_all, setmenu_panel_all] = useState(false);
+    const screenRef_menu_panel_all = useRef(null);
 
-    const handleMenuClose = () => {
-        setIsMenuOpen(false); // close when clicking outside image
-    };
+    useEffect(() => {
+        function handleClickOutside(e) {
+            if (screenRef_menu_panel_all.current && !screenRef_menu_panel_all.current.contains(e.target)) {
+                setmenu_panel_all(false);
+            }
+        }
 
-    const handleMenu = (e) => {
-        e.stopPropagation(); // prevent closing when clicking image
-    };
+        if (menu_panel_all) {
+            document.body.style.overflow = "hidden"; // disable background scroll
+            document.addEventListener("mousedown", handleClickOutside);
+        }
+
+        return () => {
+            document.body.style.overflow = "auto";
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, [menu_panel_all]);
 
     return (
         <main>
@@ -79,14 +91,14 @@ function HomeHeader() {
                                 </div>
                             </font>
                         </Link>
-                        <Link to="/status" className="no-highlight">
+                        <Link to="/destination" className="no-highlight">
                             <font className='font_for_icons_active'>
                                 <div className='icon_and_name'>
                                     <div className='header_icons_individual'>
-                                        <MdAirplaneTicket />
+                                        <MdMyLocation />
                                     </div>
                                     <div>
-                                        &nbsp;Status
+                                        &nbsp;Destination
                                     </div>
                                 </div>
                             </font>
@@ -119,7 +131,7 @@ function HomeHeader() {
 
                     <div
                         className="menu_icon no-highlight"
-                        onClick={() => setIsMenuOpen(!isMenuOpen)}
+                        onClick={() => setmenu_panel_all(true)}
                     >
                         <font className='font_for_app_name_menu'>
                             <AiOutlineMenu />
@@ -129,9 +141,9 @@ function HomeHeader() {
             </div>
 
             {/* Menu Panel */}
-            {isMenuOpen && (
-                <div className="overlay_title" onClick={handleMenuClose}>
-                    <div className="menu_panel" onClick={handleMenu}>
+            {menu_panel_all && (
+                <div className="overlay_title" onClick={() => setmenu_panel_all(false)}>
+                    <div className="menu_panel">
                         <MenuPannel />
                     </div>
                 </div>

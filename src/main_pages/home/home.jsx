@@ -3,7 +3,10 @@ import ImageChanger from './../../components/component/home_components/image_cha
 
 import OfferAndHoliday from './../../components/component/home_components/offer_and_holiday.jsx';
 import OurExpertise from './../../components/component/home_components/our_experties.jsx';
-import ExploreNewPlaces from './../../components/component/home_components/explore_new_places.jsx';
+import TravelAssistance from './../../components/component/home_components/travel_assistance.jsx';
+
+
+import DestinationDiscovery from '../../components/component/home_components/destination_discovery.jsx';
 
 
 import FooterHome from './../../components/component/footer/footer_home.jsx'
@@ -16,10 +19,10 @@ function Home() {
                 <ImageChanger />
                 <OfferAndHoliday />
                 <OurExpertise />
-                <ExploreNewPlaces />
+                <TravelAssistance />
 
 
-                <br /><br /><br /><br />
+                <DestinationDiscovery />
 
                 <FooterHome />
 

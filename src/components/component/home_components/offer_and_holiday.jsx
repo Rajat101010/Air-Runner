@@ -1,4 +1,3 @@
-// import { useState } from "react";
 import { Link } from "react-router-dom";
 
 import { useEffect, useRef, useState } from "react";
@@ -242,7 +241,7 @@ function OfferAndHoliday() {
                 {/* Content toggle */}
                 {active === "offer" && (
                     <div className="offer_and_holiday_content">
-                        <div>
+                        <div className="home_page_offer_shortcut_main_parent">
                             <div className="home_page_offer_shortcut">
                                 <div className="home_page_offer_shortcut_individual no-highlight" onClick={() => setoffer_1(true)}>
                                     <div>
@@ -400,9 +399,11 @@ function OfferAndHoliday() {
                                                 <div className="offer_mini_screen_buttons_individual" onClick={() => setoffer_1(false)}>
                                                     Not Now
                                                 </div>
-                                                <div className="offer_mini_screen_buttons_individual">
-                                                    Unlock Deal
-                                                </div>
+                                                <Link to="/" className="no-highlight">
+                                                    <div className="offer_mini_screen_buttons_individual">
+                                                        Unlock Deal
+                                                    </div>
+                                                </Link>
                                             </div>
                                         </div>
                                     </div>
@@ -482,9 +483,11 @@ function OfferAndHoliday() {
                                                 <div className="offer_mini_screen_buttons_individual" onClick={() => setoffer_2(false)}>
                                                     Not Now
                                                 </div>
-                                                <div className="offer_mini_screen_buttons_individual">
-                                                    Unlock Deal
-                                                </div>
+                                                <Link to="/" className="no-highlight">
+                                                    <div className="offer_mini_screen_buttons_individual">
+                                                        Unlock Deal
+                                                    </div>
+                                                </Link>
                                             </div>
                                         </div>
                                     </div>
@@ -564,9 +567,11 @@ function OfferAndHoliday() {
                                                 <div className="offer_mini_screen_buttons_individual" onClick={() => setoffer_3(false)}>
                                                     Not Now
                                                 </div>
-                                                <div className="offer_mini_screen_buttons_individual">
-                                                    Unlock Deal
-                                                </div>
+                                                <Link to="/" className="no-highlight">
+                                                    <div className="offer_mini_screen_buttons_individual">
+                                                        Unlock Deal
+                                                    </div>
+                                                </Link>
                                             </div>
                                         </div>
                                     </div>
@@ -580,7 +585,7 @@ function OfferAndHoliday() {
 
                 {active === "holiday" && (
                     <div className="offer_and_holiday_content">
-                        <div>
+                        <div className="home_page_offer_shortcut_main_parent">
                             <div className="home_page_offer_shortcut">
 
 
@@ -709,9 +714,11 @@ function OfferAndHoliday() {
                                                 <div className="offer_mini_screen_buttons_individual" onClick={() => setholiday_1(false)}>
                                                     Not Now
                                                 </div>
-                                                <div className="offer_mini_screen_buttons_individual">
-                                                    Unlock Deal
-                                                </div>
+                                                <Link to="/" className="no-highlight">
+                                                    <div className="offer_mini_screen_buttons_individual">
+                                                        Unlock Deal
+                                                    </div>
+                                                </Link>
                                             </div>
                                         </div>
                                     </div>
@@ -719,7 +726,7 @@ function OfferAndHoliday() {
                             </div>
                         )}
 
-                         {holiday_2 && (
+                        {holiday_2 && (
                             <div className="overlay">
                                 <div className="mini_screen" ref={screenRef_holiday_2}>
                                     <div className="offer_mini_screen_parent">
@@ -767,9 +774,11 @@ function OfferAndHoliday() {
                                                 <div className="offer_mini_screen_buttons_individual" onClick={() => setholiday_2(false)}>
                                                     Not Now
                                                 </div>
-                                                <div className="offer_mini_screen_buttons_individual">
-                                                    Unlock Deal
-                                                </div>
+                                                <Link to="/" className="no-highlight">
+                                                    <div className="offer_mini_screen_buttons_individual">
+                                                        Unlock Deal
+                                                    </div>
+                                                </Link>
                                             </div>
                                         </div>
                                     </div>
@@ -777,7 +786,7 @@ function OfferAndHoliday() {
                             </div>
                         )}
 
-                         {holiday_3 && (
+                        {holiday_3 && (
                             <div className="overlay">
                                 <div className="mini_screen" ref={screenRef_holiday_3}>
                                     <div className="offer_mini_screen_parent">

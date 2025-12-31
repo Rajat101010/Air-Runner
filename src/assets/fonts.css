@@ -70,7 +70,7 @@ medium
 
 .footer_item_font_active {
     font-family: 'Inter', sans-serif;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     font-weight: 600;
     color: #053478;
 }
@@ -290,13 +290,13 @@ medium
     color: #053478;
 }
 
-@media (max-width: 768px){
-.home_title_font {
-    font-family: 'Inter', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: #053478;
-}
+@media (max-width: 768px) {
+    .home_title_font {
+        font-family: 'Inter', sans-serif;
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: #053478;
+    }
 }
 
 .home_description_font {
@@ -306,11 +306,57 @@ medium
     color: #6A9FE0;
 }
 
-@media (max-width: 768px){
-.home_description_font {
-    font-family: 'Inter', sans-serif;
-    font-size: 0.9rem;
-    font-weight: 400;
-    color: #6A9FE0;
+@media (max-width: 768px) {
+    .home_description_font {
+        font-family: 'Inter', sans-serif;
+        font-size: 0.9rem;
+        font-weight: 400;
+        color: #6A9FE0;
+    }
 }
+
+.our_expertise_individual_title_font {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2466B3;
+}
+
+@media (max-width: 768px) {
+    .our_expertise_individual_title_font {
+        font-family: 'Inter', sans-serif;
+        font-size: 1rem;
+        font-weight: 600;
+        color: #2466B3;
+    }
+}
+
+.explore_all_font {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 200;
+    color: #053478;
+}
+
+.explore_all_font:hover {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 200;
+    color: #2466B3;
+}
+
+.travel_assistance_individual_title_font {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #2466B3;
+}
+
+@media (max-width: 768px) {
+    .travel_assistance_individual_title_font {
+        font-family: 'Inter', sans-serif;
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: #2466B3;
+    }
 }

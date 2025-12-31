@@ -5,7 +5,8 @@ import '../../css/footer/footer.css'
 import { AiFillHome } from "react-icons/ai";
 import { PiAirplaneFill } from "react-icons/pi";
 import { MdLocalOffer } from "react-icons/md";
-import { MdAirplaneTicket } from "react-icons/md";
+// import { MdAirplaneTicket } from "react-icons/md";
+import { MdMyLocation } from "react-icons/md";
 
 function FooterHome(){
     return(
@@ -44,13 +45,13 @@ function FooterHome(){
                         </center>
                     </div>
                 </Link>
-                <Link to="/status" className="no-highlight">
+                <Link to="/destination" className="no-highlight">
                     <div className='footer_items'>
                         <center>
-                            <MdAirplaneTicket size={20} className='footer_all_item' />
+                            <MdMyLocation size={20} className='footer_all_item' />
                             <br />
                             <font className='footer_item_font'>
-                                Status
+                                Destination
                             </font>
                         </center>
                     </div>

@@ -1,0 +1,60 @@
+.travel_assistance_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 30px 0px 30px;
+    gap: 20px;
+    margin-top: 5rem;
+}
+
+@media (max-width: 768px) {
+    .travel_assistance_content {
+        gap: 4px;
+        padding: 20px 0px 0px 0px;
+    }
+}
+
+.travel_assistance_content_individual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+
+    background-color: white;
+    box-shadow: 0px 6px 8px #C0C0C0;
+    width: 100%;
+    padding-bottom: 12px;
+    /* border-radius: 18px; */
+
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+    cursor: pointer;
+
+    transition: transform 0.25s ease-in-out;
+    will-change: transform;
+}
+
+.travel_assistance_content_individual:hover {
+    transform: scale(1.04);
+}
+
+.travel_assistance_image {
+    width: 90%;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    margin-top: -5rem;
+    object-fit: cover;
+    -webkit-mask-image: linear-gradient(to bottom, white 70%, transparent 100%);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: cover;
+    mask-image: linear-gradient(to bottom, white 70%, transparent 100%);
+    mask-repeat: no-repeat;
+    mask-size: cover;
+}
+
+@media (max-width: 768px) {
+    .travel_assistance_content_no_show_on_mobile {
+        display: none;
+    }
+}

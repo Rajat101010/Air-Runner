@@ -6,7 +6,7 @@
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1;
 
     display: flex;
     flex-direction: column;
@@ -84,6 +84,10 @@
 .offer_and_holiday_icons_individual svg {
     display: block;
     /* prevents baseline behavior */
+}
+
+.home_page_offer_shortcut_main_parent{
+    width: 100%;
 }
 
 .home_page_offer_shortcut {

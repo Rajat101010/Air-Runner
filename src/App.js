@@ -11,7 +11,7 @@ import './assets/fonts.css';
 import Home from './main_pages/home/home';
 import Flights from './main_pages/flights/flights';
 import Offers from './main_pages/offers/offers';
-import Status from './main_pages/status/status';
+import Destination from './main_pages/destination/destination';
 import Holiday from './main_pages/holiday/holiday';
 import EliteCard from './main_pages/elite-card/elite-card';
 
@@ -25,7 +25,7 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/flights' element={<Flights />} />
           <Route path='/offers' element={<Offers />} />
-          <Route path='/status' element={<Status />} />
+          <Route path='/destination' element={<Destination />} />
           <Route path='/holiday' element={<Holiday />} />
           <Route path='/elite-card' element={<EliteCard />} />
 

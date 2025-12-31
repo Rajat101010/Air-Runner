@@ -228,7 +228,6 @@ function MenuPannel() {
                         </Link>
                     </div>
                 </div>
-                <br /><br /><br /><br />
                 <div className='install_the_app'>
                     <InstallAppButton />
                 </div>
