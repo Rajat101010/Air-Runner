@@ -15,7 +15,7 @@
 }
 
 .elite_card_image {
-    width: 35rem;
+    width: 100%;
     border-radius: 18px;
     box-shadow: 0px 2px 8px #C0C0C0;
 
@@ -39,6 +39,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 80%;
+}
+
+@media (max-width: 768px) {
+    .image_container {
+        width: 100%;
+    }
 }
 
 .elite_card_content_description {
