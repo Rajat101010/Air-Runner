@@ -1,0 +1,11 @@
+.footer_laptop_grand_parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media(max-width: 768px) {
+    .footer_laptop_grand_parent {
+        display: none;
+    }
+}

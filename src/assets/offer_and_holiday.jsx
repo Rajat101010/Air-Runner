@@ -1,3 +1,4 @@
+// import { useState } from "react";
 import { Link } from "react-router-dom";
 
 import { useEffect, useRef, useState } from "react";
@@ -139,52 +140,6 @@ function OfferAndHoliday() {
 
 
 
-    const [holiday_2, setholiday_2] = useState(false);
-    const screenRef_holiday_2 = useRef(null);
-
-    useEffect(() => {
-        function handleClickOutside(e) {
-            if (screenRef_holiday_2.current && !screenRef_holiday_2.current.contains(e.target)) {
-                setholiday_2(false);
-            }
-        }
-
-        if (holiday_2) {
-            document.body.style.overflow = "hidden"; // disable background scroll
-            document.addEventListener("mousedown", handleClickOutside);
-        }
-
-        return () => {
-            document.body.style.overflow = "auto";
-            document.removeEventListener("mousedown", handleClickOutside);
-        };
-    }, [holiday_2]);
-
-
-
-    const [holiday_3, setholiday_3] = useState(false);
-    const screenRef_holiday_3 = useRef(null);
-
-    useEffect(() => {
-        function handleClickOutside(e) {
-            if (screenRef_holiday_3.current && !screenRef_holiday_3.current.contains(e.target)) {
-                setholiday_3(false);
-            }
-        }
-
-        if (holiday_3) {
-            document.body.style.overflow = "hidden"; // disable background scroll
-            document.addEventListener("mousedown", handleClickOutside);
-        }
-
-        return () => {
-            document.body.style.overflow = "auto";
-            document.removeEventListener("mousedown", handleClickOutside);
-        };
-    }, [holiday_3]);
-
-
-
 
 
 
@@ -241,7 +196,7 @@ function OfferAndHoliday() {
                 {/* Content toggle */}
                 {active === "offer" && (
                     <div className="offer_and_holiday_content">
-                        <div className="home_page_offer_shortcut_main_parent">
+                        <div>
                             <div className="home_page_offer_shortcut">
                                 <div className="home_page_offer_shortcut_individual no-highlight" onClick={() => setoffer_1(true)}>
                                     <div>
@@ -257,7 +212,7 @@ function OfferAndHoliday() {
                                             {HomePage_Offer_title_1}
                                         </font>
                                         <font className='home_page_offer_description_font'>
-                                            <p class="truncate-2 home_page_offer_paragraph_home">
+                                            <p class="truncate-2">
                                                 {HomePage_Offer_description_1}
                                             </p>
                                         </font>
@@ -280,7 +235,7 @@ function OfferAndHoliday() {
                                             {HomePage_Offer_title_2}
                                         </font>
                                         <font className='home_page_offer_description_font'>
-                                            <p class="truncate-2 home_page_offer_paragraph_home">
+                                            <p class="truncate-2">
                                                 {HomePage_Offer_description_2}
                                             </p>
                                         </font>
@@ -303,7 +258,7 @@ function OfferAndHoliday() {
                                             {HomePage_Offer_title_3}
                                         </font>
                                         <font className='home_page_offer_description_font'>
-                                            <p class="truncate-2 home_page_offer_paragraph_home">
+                                            <p class="truncate-2">
                                                 {HomePage_Offer_description_3}
                                             </p>
                                         </font>
@@ -362,7 +317,7 @@ function OfferAndHoliday() {
                                                 <div className="offer_mini_screen_location_info_plane_image">
                                                     <img
                                                         src={plane_arrow}
-                                                        alt="arrow"
+                                                        alt="offer"
                                                         className='ticket_like_plane_arrow'
                                                         loading="lazy"
                                                     />
@@ -390,7 +345,7 @@ function OfferAndHoliday() {
                                                     {HomePage_Offer_title_1}
                                                 </font>
                                                 <font className='home_page_offer_description_font'>
-                                                    <p class="truncate-2 home_page_offer_paragraph">
+                                                    <p class="truncate-2">
                                                         {HomePage_Offer_description_1}
                                                     </p>
                                                 </font>
@@ -399,11 +354,9 @@ function OfferAndHoliday() {
                                                 <div className="offer_mini_screen_buttons_individual" onClick={() => setoffer_1(false)}>
                                                     Not Now
                                                 </div>
-                                                <Link to="/" className="no-highlight">
-                                                    <div className="offer_mini_screen_buttons_individual">
-                                                        Unlock Deal
-                                                    </div>
-                                                </Link>
+                                                <div className="offer_mini_screen_buttons_individual">
+                                                    Unlock Deal
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -446,7 +399,7 @@ function OfferAndHoliday() {
                                                 <div className="offer_mini_screen_location_info_plane_image">
                                                     <img
                                                         src={plane_arrow}
-                                                        alt="arrow"
+                                                        alt="offer"
                                                         className='ticket_like_plane_arrow'
                                                         loading="lazy"
                                                     />
@@ -474,7 +427,7 @@ function OfferAndHoliday() {
                                                     {HomePage_Offer_title_2}
                                                 </font>
                                                 <font className='home_page_offer_description_font'>
-                                                    <p class="truncate-2 home_page_offer_paragraph">
+                                                    <p class="truncate-2">
                                                         {HomePage_Offer_description_2}
                                                     </p>
                                                 </font>
@@ -483,11 +436,9 @@ function OfferAndHoliday() {
                                                 <div className="offer_mini_screen_buttons_individual" onClick={() => setoffer_2(false)}>
                                                     Not Now
                                                 </div>
-                                                <Link to="/" className="no-highlight">
-                                                    <div className="offer_mini_screen_buttons_individual">
-                                                        Unlock Deal
-                                                    </div>
-                                                </Link>
+                                                <div className="offer_mini_screen_buttons_individual">
+                                                    Unlock Deal
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -530,7 +481,7 @@ function OfferAndHoliday() {
                                                 <div className="offer_mini_screen_location_info_plane_image">
                                                     <img
                                                         src={plane_arrow}
-                                                        alt="arrow"
+                                                        alt="offer"
                                                         className='ticket_like_plane_arrow'
                                                         loading="lazy"
                                                     />
@@ -558,7 +509,7 @@ function OfferAndHoliday() {
                                                     {HomePage_Offer_title_3}
                                                 </font>
                                                 <font className='home_page_offer_description_font'>
-                                                    <p class="truncate-2 home_page_offer_paragraph">
+                                                    <p class="truncate-2">
                                                         {HomePage_Offer_description_3}
                                                     </p>
                                                 </font>
@@ -567,11 +518,9 @@ function OfferAndHoliday() {
                                                 <div className="offer_mini_screen_buttons_individual" onClick={() => setoffer_3(false)}>
                                                     Not Now
                                                 </div>
-                                                <Link to="/" className="no-highlight">
-                                                    <div className="offer_mini_screen_buttons_individual">
-                                                        Unlock Deal
-                                                    </div>
-                                                </Link>
+                                                <div className="offer_mini_screen_buttons_individual">
+                                                    Unlock Deal
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -585,11 +534,11 @@ function OfferAndHoliday() {
 
                 {active === "holiday" && (
                     <div className="offer_and_holiday_content">
-                        <div className="home_page_offer_shortcut_main_parent">
+                        <div>
                             <div className="home_page_offer_shortcut">
 
 
-                                <div className="home_page_offer_shortcut_individual no-highlight" onClick={() => setholiday_1(true)}>
+                                <div className="home_page_offer_shortcut_individual" onClick={() => setholiday_1(true)}>
                                     <div>
                                         <img
                                             src={holiday_img_1}
@@ -603,13 +552,13 @@ function OfferAndHoliday() {
                                             {HomePage_Holiday_title_1}
                                         </font>
                                         <font className='home_page_offer_description_font'>
-                                            <p class="truncate-2 home_page_offer_paragraph_home">
+                                            <p class="truncate-2">
                                                 {HomePage_Holiday_description_1}
                                             </p>
                                         </font>
                                     </div>
                                 </div>
-                                <div className="home_page_offer_shortcut_individual no-highlight" onClick={() => setholiday_2(true)}>
+                                <div className="home_page_offer_shortcut_individual">
                                     <div>
                                         <img
                                             src={holiday_img_2}
@@ -623,13 +572,13 @@ function OfferAndHoliday() {
                                             {HomePage_Holiday_title_2}
                                         </font>
                                         <font className='home_page_offer_description_font'>
-                                            <p class="truncate-2 home_page_offer_paragraph_home">
+                                            <p class="truncate-2">
                                                 {HomePage_Holiday_description_2}
                                             </p>
                                         </font>
                                     </div>
                                 </div>
-                                <div className="home_page_offer_shortcut_individual no-highlight" onClick={() => setholiday_3(true)}>
+                                <div className="home_page_offer_shortcut_individual">
                                     <div>
                                         <img
                                             src={holiday_img_3}
@@ -643,7 +592,7 @@ function OfferAndHoliday() {
                                             {HomePage_Holiday_title_3}
                                         </font>
                                         <font className='home_page_offer_description_font'>
-                                            <p class="truncate-2 home_page_offer_paragraph_home">
+                                            <p class="truncate-2">
                                                 {HomePage_Holiday_description_3}
                                             </p>
                                         </font>
@@ -663,9 +612,6 @@ function OfferAndHoliday() {
                                 </Link>
                             </div>
                         </div>
-
-
-
                         {holiday_1 && (
                             <div className="overlay">
                                 <div className="mini_screen" ref={screenRef_holiday_1}>
@@ -673,7 +619,7 @@ function OfferAndHoliday() {
                                         <div>
                                             <img
                                                 src={holiday_img_1}
-                                                alt="holiday"
+                                                alt="offer"
                                                 className='home_page_offer_shortcut_pic_mini_page'
                                                 loading="lazy"
                                             />
@@ -681,11 +627,11 @@ function OfferAndHoliday() {
                                         <div className="offer_mini_screen_description">
                                             <div>
                                                 <font className='home_page_offer_title_font'>
-                                                    {HomePage_Holiday_title_1}
+                                                    {HomePage_Offer_title_3}
                                                 </font>
                                                 <font className='home_page_offer_description_font'>
-                                                    <p class="truncate-2 home_page_offer_paragraph">
-                                                        {HomePage_Holiday_description_1}
+                                                    <p class="truncate-2">
+                                                        {HomePage_Offer_description_3}
                                                     </p>
                                                 </font>
                                             </div>
@@ -714,126 +660,6 @@ function OfferAndHoliday() {
                                                 <div className="offer_mini_screen_buttons_individual" onClick={() => setholiday_1(false)}>
                                                     Not Now
                                                 </div>
-                                                <Link to="/" className="no-highlight">
-                                                    <div className="offer_mini_screen_buttons_individual">
-                                                        Unlock Deal
-                                                    </div>
-                                                </Link>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        )}
-
-                        {holiday_2 && (
-                            <div className="overlay">
-                                <div className="mini_screen" ref={screenRef_holiday_2}>
-                                    <div className="offer_mini_screen_parent">
-                                        <div>
-                                            <img
-                                                src={holiday_img_2}
-                                                alt="holiday"
-                                                className='home_page_offer_shortcut_pic_mini_page'
-                                                loading="lazy"
-                                            />
-                                        </div>
-                                        <div className="offer_mini_screen_description">
-                                            <div>
-                                                <font className='home_page_offer_title_font'>
-                                                    {HomePage_Holiday_title_2}
-                                                </font>
-                                                <font className='home_page_offer_description_font'>
-                                                    <p class="truncate-2 home_page_offer_paragraph">
-                                                        {HomePage_Holiday_description_2}
-                                                    </p>
-                                                </font>
-                                            </div>
-                                            <div className="holiday_mini_screen_discount_code bg_container">
-                                                <div className="holiday_mini_screen_discount_code_individual">
-                                                    <font className='holiday_mini_screen_discount_code_upto_font'>
-                                                        Upto
-                                                    </font>
-                                                    <font className='holiday_mini_screen_discount_code_percentage_font'>
-                                                        10%
-                                                    </font>
-                                                    <font className='holiday_mini_screen_discount_code_discount_font'>
-                                                        Discount
-                                                    </font>
-                                                </div>
-                                                <div className="holiday_mini_screen_discount_code_individual">
-                                                    <font className='holiday_mini_screen_discount_code_upto_font'>
-                                                        Use Code
-                                                    </font>
-                                                    <font className='holiday_mini_screen_discount_code_code_font'>
-                                                        @GR20P
-                                                    </font>
-                                                </div>
-                                            </div>
-                                            <div className="offer_mini_screen_buttons">
-                                                <div className="offer_mini_screen_buttons_individual" onClick={() => setholiday_2(false)}>
-                                                    Not Now
-                                                </div>
-                                                <Link to="/" className="no-highlight">
-                                                    <div className="offer_mini_screen_buttons_individual">
-                                                        Unlock Deal
-                                                    </div>
-                                                </Link>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        )}
-
-                        {holiday_3 && (
-                            <div className="overlay">
-                                <div className="mini_screen" ref={screenRef_holiday_3}>
-                                    <div className="offer_mini_screen_parent">
-                                        <div>
-                                            <img
-                                                src={holiday_img_3}
-                                                alt="holiday"
-                                                className='home_page_offer_shortcut_pic_mini_page'
-                                                loading="lazy"
-                                            />
-                                        </div>
-                                        <div className="offer_mini_screen_description">
-                                            <div>
-                                                <font className='home_page_offer_title_font'>
-                                                    {HomePage_Holiday_title_3}
-                                                </font>
-                                                <font className='home_page_offer_description_font'>
-                                                    <p class="truncate-2 home_page_offer_paragraph">
-                                                        {HomePage_Holiday_description_3}
-                                                    </p>
-                                                </font>
-                                            </div>
-                                            <div className="holiday_mini_screen_discount_code bg_container">
-                                                <div className="holiday_mini_screen_discount_code_individual">
-                                                    <font className='holiday_mini_screen_discount_code_upto_font'>
-                                                        Upto
-                                                    </font>
-                                                    <font className='holiday_mini_screen_discount_code_percentage_font'>
-                                                        5%
-                                                    </font>
-                                                    <font className='holiday_mini_screen_discount_code_discount_font'>
-                                                        Discount
-                                                    </font>
-                                                </div>
-                                                <div className="holiday_mini_screen_discount_code_individual">
-                                                    <font className='holiday_mini_screen_discount_code_upto_font'>
-                                                        Use Code
-                                                    </font>
-                                                    <font className='holiday_mini_screen_discount_code_code_font'>
-                                                        @WI20N
-                                                    </font>
-                                                </div>
-                                            </div>
-                                            <div className="offer_mini_screen_buttons">
-                                                <div className="offer_mini_screen_buttons_individual" onClick={() => setholiday_3(false)}>
-                                                    Not Now
-                                                </div>
                                                 <div className="offer_mini_screen_buttons_individual">
                                                     Unlock Deal
                                                 </div>
@@ -843,9 +669,6 @@ function OfferAndHoliday() {
                                 </div>
                             </div>
                         )}
-
-
-
                     </div>
                 )}
 

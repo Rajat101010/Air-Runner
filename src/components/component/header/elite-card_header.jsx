@@ -142,8 +142,8 @@ function HomeHeader() {
 
             {/* Menu Panel */}
             {menu_panel_all && (
-                <div className="overlay_title" onClick={() => setmenu_panel_all(false)}>
-                    <div className="menu_panel">
+                <div className="overlay_title">
+                    <div className="menu_panel" ref={screenRef_menu_panel_all}>
                         <MenuPannel />
                     </div>
                 </div>

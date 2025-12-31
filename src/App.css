@@ -20,7 +20,7 @@
 body {
   padding-top: 55px;
 
-  padding-bottom: 500px;
+  padding-bottom: 55px;
 }
 
 @media (max-width: 768px) {
@@ -58,17 +58,17 @@ body {
   align-items: center;
 }
 
-.explore_all_div_after_font{
+.explore_all_div_after_font {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
 }
 
-.explore_all_div_after_font svg{
+.explore_all_div_after_font svg {
   display: block;
 }
 
-.explore_all_arrow_class{
+.explore_all_arrow_class {
   padding-left: 5px;
 }

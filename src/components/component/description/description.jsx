@@ -57,23 +57,30 @@ destinations, and create warm memories with loved ones while experiencing the ma
 
 
 
-export const OurExpertise_Description =`
+export const OurExpertise_Description = `
 Step into the Air Runner experience, where each flight is crafted with a passion for aviation and attention to detail. 
 Every journey is designed to go beyond standard travel, offering comfort, precision, and memorable moments. Explore how 
 thoughtful planning and excellence come together to create experiences that rise above expectations and redefine the way 
 you fly.
 `;
 
-export const TravelAssistance_Description =`
+export const TravelAssistance_Description = `
 Travel Assistance with Air Runner is designed to make every journey effortless and enjoyable. Discover expert tips on packing 
 smart, navigating airports and borders with ease, calming first-time travel nerves, and travelling comfortably with pets. 
 Beyond flights, Air Runner supports you at every step, ensuring a smooth, informed, and stress-free travel experience from 
 start to finish.
 `;
 
-export const DestinationDiscovery_Description =`
+export const DestinationDiscovery_Description = `
 Destination Discovery with Air Runner opens the door to exploring new places and unforgettable experiences. From hidden 
 gems to popular hotspots, we inspire travelers to step beyond the familiar and discover destinations full of culture, 
 beauty, and adventure. Whether you seek relaxation or excitement, Air Runner helps you uncover new journeys and create 
 memories in places you’ve never been before.
+`;
+
+export const EliteCard_Description = `
+The Air Runner Elite Card is designed to reward frequent flyers with exclusive benefits and extra savings. Enjoy additional 
+discounts on every booking and unlock greater perks as you fly more. The card features three levels - Level 1, Level 2, and 
+Level 3 - each upgraded after completing 100 flights, offering increasing rewards, privileges, and a more premium travel 
+experience every step of the way.
 `;

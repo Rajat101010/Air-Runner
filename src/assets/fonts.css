@@ -360,3 +360,35 @@ medium
         color: #2466B3;
     }
 }
+
+.elite_card_info_title_font {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #053478;
+}
+
+@media (max-width: 768px) {
+    .elite_card_info_title_font {
+        font-family: 'Inter', sans-serif;
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #053478;
+    }
+}
+
+.elite_card_info_description_font {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #2466B3;
+}
+
+@media (max-width: 768px) {
+    .elite_card_info_description_font {
+        font-family: 'Inter', sans-serif;
+        font-size: 0.9rem;
+        font-weight: 400;
+        color: #2466B3;
+    }
+}

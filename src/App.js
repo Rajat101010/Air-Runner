@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 //assets
 import './assets/fonts.css';
 
-//bus-pages
+//pages
 import Home from './main_pages/home/home';
 import Flights from './main_pages/flights/flights';
 import Offers from './main_pages/offers/offers';
