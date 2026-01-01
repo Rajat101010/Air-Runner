@@ -84,3 +84,17 @@ discounts on every booking and unlock greater perks as you fly more. The card fe
 Level 3 - each upgraded after completing 100 flights, offering increasing rewards, privileges, and a more premium travel 
 experience every step of the way.
 `;
+
+export const Offer_Description = `
+Discover exciting offers with Air Runner, featuring special festive discounts, exclusive occasional deals, and many more 
+savings throughout the year. Whether you’re traveling during celebrations or planning a spontaneous getaway, our offers 
+are designed to make every journey more affordable and rewarding. Stay updated and enjoy great value on flights, because 
+there’s always something special waiting for you.
+`;
+
+export const Holiday_Description = `
+Plan your perfect getaway with Air Runner Holiday Plans, crafted to suit every kind of traveler. From festive escapes 
+and seasonal breaks to relaxing family vacations and quick weekend trips, our holiday plans combine great destinations 
+with attractive deals. Travel stress-free, explore more, and create unforgettable memories with thoughtfully designed 
+holiday experiences made just for you.
+`;

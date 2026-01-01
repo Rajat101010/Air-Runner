@@ -1,0 +1,20 @@
+.holiday_discount_and_code_description {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+@media (max-width: 768px) {
+    .holiday_discount_and_code_description {
+        display: none;
+    }
+}
+
+.holiday_discount_and_code_description_div1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
