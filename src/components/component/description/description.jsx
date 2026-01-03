@@ -98,3 +98,49 @@ and seasonal breaks to relaxing family vacations and quick weekend trips, our ho
 with attractive deals. Travel stress-free, explore more, and create unforgettable memories with thoughtfully designed 
 holiday experiences made just for you.
 `;
+
+
+
+
+export const Bali_Description = `
+Bali is a perfect blend of serene beaches, lush rice terraces, vibrant culture, and spiritual charm. From thrilling 
+adventures to peaceful retreats, Bali offers something for every traveler. With Air Runner, reaching this tropical 
+paradise becomes effortless, comfortable, and affordable—so you can focus on creating unforgettable memories while 
+we take care of your journey.
+`;
+
+export const Paris_Description = `
+Paris is a destination where romance, art, fashion, and history come together effortlessly. From the Eiffel Tower 
+and Louvre Museum to cozy cafés and scenic Seine cruises, every corner tells a story. Travel to Paris with Air Runner 
+and enjoy seamless flights, exclusive offers, and a premium journey that makes your Parisian escape truly unforgettable.
+`;
+
+export const Rome_Description = `
+Rome is a living museum where ancient history meets modern charm. Explore legendary landmarks like the Colosseum, 
+Roman Forum, and Vatican City while enjoying authentic Italian cuisine and vibrant street life. With Air Runner, your 
+journey to Rome becomes effortless, letting you focus on discovering the culture, history, and soul of the Eternal City.
+`;
+
+export const Bangkok_Description = `
+Bangkok is a vibrant blend of tradition and modern life, where golden temples meet buzzing street markets and world-class 
+nightlife. From authentic Thai cuisine to rich cultural landmarks, the city offers unforgettable experiences. Fly with Air 
+Runner and explore Bangkok with comfort, convenience, and exclusive travel benefits.
+`;
+
+export const Dubai_Description = `
+Dubai is a city of luxury, innovation, and unforgettable skylines. From iconic landmarks like the Burj Khalifa to desert 
+safaris and premium shopping, every moment feels extraordinary. Travel smart with Air Runner and enjoy seamless journeys 
+to one of the world’s most dynamic destinations.
+`;
+
+export const Kyoto_Description = `
+Kyoto invites travelers into Japan’s cultural heart, filled with ancient temples, serene gardens, and timeless traditions. 
+Experience cherry blossoms, historic streets, and authentic cuisine. Let Air Runner take you to Kyoto, where every journey 
+blends elegance, comfort, and discovery.
+`;
+
+export const London_Description = `
+London is a global city rich in history, culture, and modern charm. From royal landmarks and museums to vibrant streets and 
+theatres, it offers something for every traveler. Discover London with Air Runner, ensuring a smooth, stylish, and memorable 
+travel experience.
+`;

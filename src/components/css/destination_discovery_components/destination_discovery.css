@@ -1,0 +1,75 @@
+.destination_description_page_content {
+    /* background-color: yellowgreen; */
+    display: grid;
+    gap: 20px;
+    padding: 30px 30px 0 30px;
+    grid-template-columns: repeat(3, 1fr);
+
+}
+
+@media (max-width: 768px) {
+    .destination_description_page_content {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 20px 0px 0px 0px;
+        gap: 10px;
+
+    }
+}
+
+.destination_description_page_content_individual {
+    /* background-color: blue; */
+    /* border-bottom: 2px solid black; */
+    /* background-color: #F2F7FF; */
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 50px;
+    /* box-shadow: 0px 0px 20px #C0C0C0; */
+    border: 1px dashed #053478;
+
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    transition: transform 0.25s ease-in-out;
+    will-change: transform;
+}
+
+.destination_description_page_content_individual:hover {
+    transform: scale(1.04);
+}
+
+.destination_discovery_page_image {
+    width: 4.5rem;
+    border-radius: 1000px;
+    border: 5px solid #053478;
+    padding: 3px;
+}
+
+@media (max-width: 768px) {
+    .destination_discovery_page_image {
+        width: 3.8rem;
+    }
+}
+
+.destination_description_page_content_individual_border{
+        border-left: 1px solid #053478;
+
+}
+
+.destination_description_page_content_individual_description {
+    padding-left: 10px;
+
+    animation: destination_discovery_animation 0.4s ease-in-out forwards;
+    clip-path: inset(0 100% 0 0); /* hidden from right */
+}
+
+@keyframes destination_discovery_animation {
+    from {
+        clip-path: inset(0 100% 0 0);
+        opacity: 0.3;
+    }
+    to {
+        clip-path: inset(0 0 0 0);
+        opacity: 1;
+    }
+}

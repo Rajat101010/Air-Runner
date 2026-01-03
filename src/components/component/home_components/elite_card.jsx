@@ -145,7 +145,7 @@ function OurExpertise() {
                         </div>
                         <div>
                             <div className="offer_mini_screen_buttons">
-                                <Link to="/" className="no-highlight">
+                                <Link to="/elite-card" className="no-highlight">
                                     <div className="offer_mini_screen_buttons_individual">
                                         Explore
                                     </div>

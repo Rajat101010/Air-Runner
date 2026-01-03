@@ -106,7 +106,7 @@ function Offer() {
     return (
         <main>
             <div className='offer_parent'>
-                <div>
+                <div className='our_expertise_title'>
                     <font className='home_title_font'>
                         <div className="our_expertise_title_title">
                             <div>
@@ -215,8 +215,6 @@ function Offer() {
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div className='offer_div_lines'>
                         <div className='offer_div_individual no-highlight' onClick={() => setoffer_3(true)}>
                             <div>
                                 <img

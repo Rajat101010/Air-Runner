@@ -102,7 +102,7 @@ function Holiday() {
     return (
         <main>
             <div className='offer_parent'>
-                <div>
+                <div className='our_expertise_title'>
                     <font className='home_title_font'>
                         <div className="our_expertise_title_title">
                             <div>

@@ -193,9 +193,9 @@ function MenuPannel() {
                             </div>
                         </Link>
                     </div>
-                    <div className='link_fix_no_mobile'>
+                    <div className='link_fix'>
                         <Link to="/t-&-c" className="no-highlight">
-                            <div className='action_bar_icons_and_name_individual action_bar_icons_and_name_individual_no_display_in_mobile action_bar_font no-highlight'>
+                            <div className='action_bar_icons_and_name_individual action_bar_font no-highlight'>
                                 <div className='action_bar_icons_and_name_individual_no_arrow'>
                                     <div className='header_icons_individual'>
                                         <RiFilePaper2Fill />

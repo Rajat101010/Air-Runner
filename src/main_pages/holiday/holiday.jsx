@@ -1,6 +1,6 @@
 import HolidayHeader from './../../components/component/header/hiliday_header.jsx';
 
-import Holiday from './../../components/component/holiday_components/holiday.jsx';
+import HolidayComponent from './../../components/component/holiday_components/holiday.jsx';
 
 
 import FooterNone from './../../components/component/footer/footer_none.jsx'
@@ -8,11 +8,11 @@ import LaptopFooter from './../../components/component/footer/laptop_footer.jsx'
 
 
 
-function Home() {
+function Holiday() {
     return (
             <main>
                 <HolidayHeader />
-                <Holiday />
+                <HolidayComponent />
 
                 <FooterNone />
                 <LaptopFooter />
@@ -21,5 +21,5 @@ function Home() {
     );
 }
 
-export default Home;
+export default Holiday;
 

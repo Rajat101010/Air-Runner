@@ -1,0 +1,23 @@
+.travel_assistance_page_content {
+    display: grid;
+    gap: 20px;
+    padding: 30px 30px 0 30px;
+    /* background-color: blue; */
+    grid-template-columns: repeat(5, 1fr);
+    margin-top: -1rem;
+    
+
+}
+
+@media (max-width: 768px) {
+    .travel_assistance_page_content {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 20px 0px 0px 0px;
+        gap: 10px;
+
+    }
+}
+
+.travel_assistance_page_content_individual{
+    margin-top: 6rem;
+}

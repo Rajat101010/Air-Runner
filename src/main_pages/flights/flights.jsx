@@ -1,19 +1,19 @@
 import FlightsHeader from './../../components/component/header/flights_header.jsx';
 
 import FooterFlights from './../../components/component/footer/footer_flights.jsx'
+import LaptopFooter from './../../components/component/footer/laptop_footer.jsx';
 
 
-function Home() {
+function Flights() {
     return (
-            <main>
-                <FlightsHeader />
-                <br /><br /><br /><br />
+        <main>
+            <FlightsHeader />
 
-                <FooterFlights />
-
-            </main>
+            <FooterFlights />
+            <LaptopFooter />
+        </main>
     );
 }
 
-export default Home;
+export default Flights;
 

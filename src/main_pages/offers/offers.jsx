@@ -8,7 +8,7 @@ import LaptopFooter from './../../components/component/footer/laptop_footer.jsx'
 
 
 
-function Home() {
+function Offers() {
     return (
         <main>
             <OffersHeader />
@@ -23,5 +23,5 @@ function Home() {
     );
 }
 
-export default Home;
+export default Offers;
 

@@ -42,7 +42,7 @@
 
 @media (max-width: 768px) {
     .our_expertise_content {
-        gap: 4px;
+        gap: 5px;
         padding: 20px 0px 0px 0px;
     }
 }

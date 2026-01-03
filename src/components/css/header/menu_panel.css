@@ -165,10 +165,6 @@
     .action_bar_icons_and_name_individual_no_display {
         display: flex;
     }
-
-    .action_bar_icons_and_name_individual_no_display_in_mobile {
-        display: none;
-    }
 }
 
 
