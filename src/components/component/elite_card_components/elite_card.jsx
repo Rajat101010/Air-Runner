@@ -47,70 +47,6 @@ function EliteCard() {
                     </font>
                 </div>
                 <div className="elite_card_page_content">
-                    <div className="elite_card_page_content_description">
-                        <div className="elite_card_page_content_description_link">
-                            <Link to="/" className="no-highlight">
-                                <div className="elite_card_page_content_button">
-                                    Become an Elite Member
-                                </div>
-                            </Link>
-                        </div>
-                        <div>
-                            <font className='home_page_offer_title_font'>
-                                Designed for Frequent Flyers
-                            </font>
-                            <font className='home_page_offer_description_font'>
-                                <p class="truncate-all home_page_offer_paragraph_home">
-                                    {Description_1}
-                                </p>
-                            </font>
-                        </div>
-                        <div>
-                            <font className='home_page_offer_title_font'>
-                                Additional Discounts
-                            </font>
-                            <font className='home_page_offer_description_font'>
-                                <p class="truncate-all home_page_offer_paragraph_home">
-                                    {Description_2}
-                                </p>
-                            </font>
-                        </div>
-                        <div>
-                            <font className='home_page_offer_title_font'>
-                                Tier-Based Membership Levels
-                            </font>
-                            <font className='home_page_offer_description_font'>
-                                <p class="truncate-all home_page_offer_paragraph_home">
-                                    <ul className="elite_card_page_content_description_ul">
-                                        <li>Explorer – Entry-tier access with essential benefits, useful discounts, and early rewards</li>
-                                        <li>Navigator – Stronger privileges, expanded benefits, and noticeably enhanced rewards on every trip</li>
-                                        <li>Aviator – Top-tier status offering maximum perks, premium services, and elite-level recognition</li>
-                                        <li>Elite – Ultimate level unlocking all rewards, VIP services, priority treatment, and exclusive access</li>
-                                    </ul>
-                                </p>
-                            </font>
-                        </div>
-                        <div>
-                            <font className='home_page_offer_title_font'>
-                                Upgrade Criteria
-                            </font>
-                            <font className='home_page_offer_description_font'>
-                                <p class="truncate-all home_page_offer_paragraph_home">
-                                    {Description_3}
-                                </p>
-                            </font>
-                        </div>
-                        <div>
-                            <font className='home_page_offer_title_font'>
-                                Premium Travel Experience
-                            </font>
-                            <font className='home_page_offer_description_font'>
-                                <p class="truncate-all home_page_offer_paragraph_home">
-                                    {Description_4}
-                                </p>
-                            </font>
-                        </div>
-                    </div>
                     <div className="elite_card_page_content_image_and_description">
                         <div className="elite_card_page_image_container">
                             <img
@@ -215,6 +151,70 @@ function EliteCard() {
                                         </div>
                                     </div>
                                 </div>
+                            </font>
+                        </div>
+                    </div>
+                    <div className="elite_card_page_content_description">
+                        <div className="elite_card_page_content_description_link">
+                            <Link to="/" className="no-highlight">
+                                <div className="elite_card_page_content_button">
+                                    Become an Elite Member
+                                </div>
+                            </Link>
+                        </div>
+                        <div>
+                            <font className='home_page_offer_title_font'>
+                                Designed for Frequent Flyers
+                            </font>
+                            <font className='home_page_offer_description_font'>
+                                <p class="truncate-all home_page_offer_paragraph_home">
+                                    {Description_1}
+                                </p>
+                            </font>
+                        </div>
+                        <div>
+                            <font className='home_page_offer_title_font'>
+                                Additional Discounts
+                            </font>
+                            <font className='home_page_offer_description_font'>
+                                <p class="truncate-all home_page_offer_paragraph_home">
+                                    {Description_2}
+                                </p>
+                            </font>
+                        </div>
+                        <div>
+                            <font className='home_page_offer_title_font'>
+                                Tier-Based Membership Levels
+                            </font>
+                            <font className='home_page_offer_description_font'>
+                                <p class="truncate-all home_page_offer_paragraph_home">
+                                    <ul className="elite_card_page_content_description_ul">
+                                        <li>Explorer – Entry-tier access with essential benefits, useful discounts, and early rewards</li>
+                                        <li>Navigator – Stronger privileges, expanded benefits, and noticeably enhanced rewards on every trip</li>
+                                        <li>Aviator – Top-tier status offering maximum perks, premium services, and elite-level recognition</li>
+                                        <li>Elite – Ultimate level unlocking all rewards, VIP services, priority treatment, and exclusive access</li>
+                                    </ul>
+                                </p>
+                            </font>
+                        </div>
+                        <div>
+                            <font className='home_page_offer_title_font'>
+                                Upgrade Criteria
+                            </font>
+                            <font className='home_page_offer_description_font'>
+                                <p class="truncate-all home_page_offer_paragraph_home">
+                                    {Description_3}
+                                </p>
+                            </font>
+                        </div>
+                        <div>
+                            <font className='home_page_offer_title_font'>
+                                Premium Travel Experience
+                            </font>
+                            <font className='home_page_offer_description_font'>
+                                <p class="truncate-all home_page_offer_paragraph_home">
+                                    {Description_4}
+                                </p>
                             </font>
                         </div>
                     </div>
