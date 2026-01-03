@@ -1,0 +1,106 @@
+.elite_card_page_content {
+    /* background-color: yellowgreen; */
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    gap: 50px;
+    padding: 30px 30px 0 30px;
+
+}
+
+@media (max-width: 768px) {
+    .elite_card_page_content {
+        padding: 20px 0px 0px 0px;
+        gap: 30px;
+        flex-direction: column;
+
+    }
+}
+
+
+.elite_card_page_image {
+    width: 30rem;
+    border-radius: 18px;
+    box-shadow: 0px 2px 8px #C0C0C0;
+
+    transition: transform 0.25s ease-in-out;
+    will-change: transform;
+}
+
+.elite_card_page_image:hover {
+    transform: scale(1.04);
+}
+
+@media (max-width: 768px) {
+    .elite_card_page_image {
+        width: 90%;
+        border-radius: 18px;
+        box-shadow: 0px 2px 8px #C0C0C0;
+    }
+}
+
+.elite_card_page_image_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.elite_card_page_content_image_and_description {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.elite_card_page_content_description {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+@media (max-width: 768px) {
+    .elite_card_page_content_description {
+        gap: 20px;
+    }
+}
+
+.elite_card_page_content_description_ul {
+    margin: 0;
+    padding-left: 2rem;
+}
+
+.elite_card_page_content_description_link {
+    /* background-color: yellowgreen; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.elite_card_page_content_button {
+    background-color: #6A9FE0;
+    color: white;
+    border-radius: 8px;
+    padding: 0.8rem;
+    width: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .elite_card_page_content_button {
+        width: 100%;
+    }
+}
+
+.elite_card_page_content_button:hover {
+    background-color: #053478;
+    color: white;
+}
+
+
+.elite_card_page_content_member_count_parent {
+    margin: 20px 0px -10px 0px;
+}
