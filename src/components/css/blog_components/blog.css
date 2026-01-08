@@ -1,0 +1,112 @@
+.blog_page_content {
+    display: grid;
+    gap: 30px;
+    padding: 30px 30px 0 30px;
+    /* background-color: blue; */
+    grid-template-columns: repeat(3, 1fr);
+
+}
+
+@media (max-width: 768px) {
+    .blog_page_content {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 20px 0px 0px 0px;
+        gap: 20px;
+
+    }
+}
+
+
+.blog_content_individual {
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    flex-direction: column;
+
+    background-color: #FFFDF7;
+    box-shadow: 0px 2px 8px #C0C0C0;
+    width: 100%;
+    padding-bottom: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+
+.blog_image {
+    width: 100%;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.blog_information_content{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-direction: column;
+    padding: 12px;
+    gap: 5px;
+}
+
+.blog_information_content_tags{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.blog_information_content_tags_individual{
+    /* background-color: #F2F7FF; */
+    background-color: #D7E9FB;
+    padding: 4px 10px;
+    border-radius: 5px;
+}
+
+.blog_information_content_title{
+    margin-top: 0.6rem;
+}
+
+.blog_description_paragraph {
+    line-height: 18px;
+    padding-top: 5px;
+}
+
+.blog_information_content_user_info{
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.blog_information_content_date_information{
+    margin-top: -0.3rem;
+}
+
+.user_icon_blog_page{
+    display: flex;
+}
+
+.user_icon_blog_page svg{
+    display: block;
+}
+
+
+
+.mini_blog {
+    background-color: #FFFDF7;
+    width: 30%;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+
+    margin: 5rem;
+    border-radius: 6px;
+
+    padding: 2rem;
+}
+
+@media (max-width: 768px) {
+    .mini_blog {
+        margin: 0.5rem;
+        padding: 1rem 1rem 2rem 1rem;
+        width: auto;
+    }
+}

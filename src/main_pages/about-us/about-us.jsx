@@ -1,6 +1,6 @@
 import HeaderNone from './../../components/component/header/header_none.jsx';
 
-// import OurExpertiseComponent from './../../components/component/our_experties_components/our_experties.jsx';
+import AboutUSComponent from './../../components/component/about_us_components/about_us.jsx';
 
 
 import FooterNone from './../../components/component/footer/footer_none.jsx'
@@ -12,7 +12,7 @@ function AboutUs() {
     return (
             <main>
                 <HeaderNone />
-                {/* <OurExpertiseComponent /> */}
+                <AboutUSComponent />
 
                 <FooterNone />
                 <LaptopFooter />

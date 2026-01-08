@@ -9,22 +9,6 @@
     }
 }
 
-/* .our_expertise__page_content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 30px 0px 30px;
-    gap: 30px;
-    background-color: blue;
-}
-
-@media (max-width: 768px) {
-    .our_expertise__page_content {
-        gap: 4px;
-        padding: 20px 0px 0px 0px;
-    }
-} */
-
 
 .our_expertise__page_content {
     display: grid;
