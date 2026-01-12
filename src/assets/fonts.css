@@ -465,9 +465,44 @@ medium
     color: #053478;
 }
 
-.blog_information_content_date_font{
+.blog_information_content_date_font {
     font-family: 'Inter', sans-serif;
     font-size: 0.7rem;
+    font-weight: 400;
+    color: #6A9FE0;
+}
+
+.contact_us_form_title_font {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #053478;
+}
+
+.contact_us_customer_support_individual_title_font {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #2466B3;
+}
+
+.contact_us_customer_support_individual_description_font {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #6A9FE0;
+}
+
+.contact_us_country_name {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #053478;
+}
+
+.contact_us_country_number {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
     font-weight: 400;
     color: #6A9FE0;
 }
