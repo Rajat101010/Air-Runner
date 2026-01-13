@@ -13,29 +13,29 @@ import { FaCircleUser } from "react-icons/fa6";
 
 
 
-import { Blogs_Title_1 } from '../description/description'
-import { Blogs_Description_1 } from '../description/description'
+import { Blogs_Title_1 } from './description'
+import { Blogs_Description_1 } from './description'
 
-import { Blogs_Title_2 } from '../description/description'
-import { Blogs_Description_2 } from '../description/description'
+import { Blogs_Title_2 } from './description'
+import { Blogs_Description_2 } from './description'
 
-import { Blogs_Title_3 } from '../description/description'
-import { Blogs_Description_3 } from '../description/description'
+import { Blogs_Title_3 } from './description'
+import { Blogs_Description_3 } from './description'
 
-import { Blogs_Title_4 } from '../description/description'
-import { Blogs_Description_4 } from '../description/description'
+import { Blogs_Title_4 } from './description'
+import { Blogs_Description_4 } from './description'
 
-import { Blogs_Title_5 } from '../description/description'
-import { Blogs_Description_5 } from '../description/description'
+import { Blogs_Title_5 } from './description'
+import { Blogs_Description_5 } from './description'
 
-import { Blogs_Title_6 } from '../description/description'
-import { Blogs_Description_6 } from '../description/description'
+import { Blogs_Title_6 } from './description'
+import { Blogs_Description_6 } from './description'
 
-import { Blogs_Title_7 } from '../description/description'
-import { Blogs_Description_7 } from '../description/description'
+import { Blogs_Title_7 } from './description'
+import { Blogs_Description_7 } from './description'
 
-import { Blogs_Title_8 } from '../description/description'
-import { Blogs_Description_8 } from '../description/description'
+import { Blogs_Title_8 } from './description'
+import { Blogs_Description_8 } from './description'
 
 
 import blog_image_1 from '../../../assets/blogs_pictures/1.webp'

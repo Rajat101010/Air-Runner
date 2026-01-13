@@ -506,3 +506,42 @@ medium
     font-weight: 400;
     color: #6A9FE0;
 }
+
+.faq_title_font_support_page {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #2466B3;
+}
+
+@media (max-width: 768px) {
+    .faq_title_font_support_page {
+        font-family: 'Inter', sans-serif;
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: #2466B3;
+    }
+}
+
+.faq_title_font_mini_faq {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2466B3;
+}
+
+.faq_description_font_mini_faq {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #2466B3;
+}
+
+@media (max-width: 768px) {
+    .faq_description_font_mini_faq {
+        font-family: 'Inter', sans-serif;
+        font-size: 0.8rem;
+        font-weight: 400;
+        color: #2466B3;
+    }
+}

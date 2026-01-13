@@ -6,7 +6,9 @@ import "../../../components/css/support_components/support.css";
 
 // import { Link } from "react-router-dom";
 // import { useState } from "react";
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
+
 
 import ReactCountryFlag from "react-country-flag";
 
@@ -15,10 +17,95 @@ import { Support_Description } from '../description/description'
 
 import { MdSupportAgent } from "react-icons/md";
 
+
+import { MdAirplaneTicket } from "react-icons/md";
+import { FaUserCheck } from "react-icons/fa";
+import { FaSuitcaseRolling } from "react-icons/fa6";
+import { FaBagShopping } from "react-icons/fa6";
+import { RiSuitcase3Fill } from "react-icons/ri";
+import { MdAirlineSeatReclineExtra } from "react-icons/md";
+import { TbStatusChange } from "react-icons/tb";
+import { FaPlaneSlash } from "react-icons/fa";
+import { RiRefund2Fill } from "react-icons/ri";
+import { FaPassport } from "react-icons/fa6";
+import { LuTicketsPlane } from "react-icons/lu";
+import { MdAssistantDirection } from "react-icons/md";
+import { FaBriefcaseMedical } from "react-icons/fa6";
+import { IoFastFoodSharp } from "react-icons/io5";
+import { FaPlaneCircleExclamation } from "react-icons/fa6";
+import { FaPlaneDeparture } from "react-icons/fa6";
+import { FaPeopleGroup } from "react-icons/fa6";
+import { MdPets } from "react-icons/md";
+import { RiCustomerService2Fill } from "react-icons/ri";
+
+
+
+import { faq_1_Description } from './description'
+import { faq_2_Description } from './description'
+import { faq_3_Description } from './description'
+import { faq_4_Description } from './description'
+import { faq_5_Description } from './description'
+import { faq_6_Description } from './description'
+import { faq_7_Description } from './description'
+import { faq_8_Description } from './description'
+import { faq_9_Description } from './description'
+import { faq_10_Description } from './description'
+import { faq_11_Description } from './description'
+import { faq_12_Description } from './description'
+import { faq_13_Description } from './description'
+import { faq_14_Description } from './description'
+import { faq_15_Description } from './description'
+import { faq_16_Description } from './description'
+import { faq_17_Description } from './description'
+import { faq_18_Description } from './description'
+import { faq_19_Description } from './description'
+import { faq_20_Description } from './description'
+
+
+import { MdKeyboardDoubleArrowLeft } from "react-icons/md";
+import { MdKeyboardDoubleArrowRight } from "react-icons/md";
+
+
+
 function Support() {
+
+
+
+
+
+
+    const [activefaq, setActivefaq] = useState(null); // null | faq id
+    const screenRef = useRef(null);
+
+    useEffect(() => {
+        function handleClickOutside(e) {
+            if (screenRef.current && !screenRef.current.contains(e.target)) {
+                setActivefaq(null);
+            }
+        }
+
+        if (activefaq !== null) {
+            document.body.style.overflow = "hidden";
+            document.addEventListener("mousedown", handleClickOutside);
+        }
+
+        return () => {
+            document.body.style.overflow = "auto";
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, [activefaq]);
+
+
+
+
+
+
     const [active, setActive] = useState("contact_us");
 
 
+
+
+    
 
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
@@ -68,6 +155,73 @@ function Support() {
 
 
     const [showPopup, setShowPopup] = useState(false);
+
+
+
+    const TOTAL_FAQS = 20; // change this to your total count
+
+    useEffect(() => {
+        const handleKeyDown = (e) => {
+            if (activefaq > 0) {
+                if (e.key === "ArrowRight") {
+                    setActivefaq((prev) =>
+                        prev === TOTAL_FAQS ? 1 : prev + 1
+                    );
+                }
+
+                if (e.key === "ArrowLeft") {
+                    setActivefaq((prev) =>
+                        prev === 1 ? TOTAL_FAQS : prev - 1
+                    );
+                }
+            }
+        };
+
+        window.addEventListener("keydown", handleKeyDown);
+        return () => window.removeEventListener("keydown", handleKeyDown);
+    }, [activefaq]);
+
+
+
+
+
+
+
+
+
+    const touchStartX = useRef(0);
+    const touchEndX = useRef(0);
+
+
+    const handleTouchStart = (e) => {
+        touchStartX.current = e.touches[0].clientX;
+    };
+
+    const handleTouchMove = (e) => {
+        touchEndX.current = e.touches[0].clientX;
+    };
+
+    const handleTouchEnd = () => {
+        const diff = touchStartX.current - touchEndX.current;
+
+        if (Math.abs(diff) < 50) return; // ignore tiny swipes
+
+        // swipe right → left (NEXT)
+        if (diff > 0) {
+            setActivefaq((prev) =>
+                prev === TOTAL_FAQS ? 1 : prev + 1
+            );
+        }
+
+        // swipe left → right (PREV)
+        if (diff < 0) {
+            setActivefaq((prev) =>
+                prev === 1 ? TOTAL_FAQS : prev - 1
+            );
+        }
+    };
+
+
 
 
 
@@ -544,7 +698,1008 @@ function Support() {
                 active === "faqs" && (
                     <div>
                         <div className="support_content_main_parent">
-                            hi
+                            <font className='faq_title_font_support_page'>
+                                <div className="support_content_parent">
+                                    <div className="support_content_parent_individual no-highlight" onClick={() => setActivefaq(1)}>
+                                        <div>
+                                            <MdAirplaneTicket size={20} />
+                                        </div>
+                                        <div>
+                                            Flight Booking
+                                        </div>
+                                    </div>
+
+                                    {activefaq === 1 && (
+                                        <div className="overlay">
+                                            <div
+                                                className="mini_faq"
+                                                ref={screenRef}
+                                                onTouchStart={handleTouchStart}
+                                                onTouchMove={handleTouchMove}
+                                                onTouchEnd={handleTouchEnd}
+                                            >
+                                                <div className="faq_left_arrow no-highlight" onClick={() => setActivefaq(20)}>
+                                                    <MdKeyboardDoubleArrowLeft size={20} />
+                                                </div>
+                                                <div className="faw_content_div">
+                                                    <font className='faq_title_font_mini_faq'>
+                                                        <div className="faq_information_content">
+                                                            <div className="faq_icons">
+                                                                <MdAirplaneTicket size={22} />
+                                                            </div>
+                                                            <div>
+                                                                Flight Booking
+                                                            </div>
+                                                        </div>
+                                                    </font>
+                                                    <font className='faq_description_font_mini_faq'>
+                                                        <div className="faq_paragraph_div">
+                                                            <p className="truncate-all our_expertise_description_paragraph">
+                                                                {faq_1_Description}
+                                                            </p>
+                                                        </div>
+                                                    </font>
+                                                </div>
+                                                <div className="faq_left_right no-highlight" onClick={() => setActivefaq(2)}>
+                                                    <MdKeyboardDoubleArrowRight size={20} />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )}
+
+
+
+                                    <div className="support_content_parent_individual no-highlight" onClick={() => setActivefaq(2)}>
+                                        <div>
+                                            <FaUserCheck size={20} />
+                                        </div>
+                                        <div>
+                                            Online Check-In
+                                        </div>
+                                    </div>
+
+                                    {activefaq === 2 && (
+                                        <div className="overlay">
+                                            <div
+                                                className="mini_faq"
+                                                ref={screenRef}
+                                                onTouchStart={handleTouchStart}
+                                                onTouchMove={handleTouchMove}
+                                                onTouchEnd={handleTouchEnd}
+                                            >
+                                                <div className="faq_left_arrow no-highlight" onClick={() => setActivefaq(1)}>
+                                                    <MdKeyboardDoubleArrowLeft size={20} />
+                                                </div>
+                                                <div className="faw_content_div">
+                                                    <font className='faq_title_font_mini_faq'>
+                                                        <div className="faq_information_content">
+                                                            <div className="faq_icons">
+                                                                <FaUserCheck size={22} />
+                                                            </div>
+                                                            <div>
+                                                                Online Check-In
+                                                            </div>
+                                                        </div>
+                                                    </font>
+                                                    <font className='faq_description_font_mini_faq'>
+                                                        <div className="faq_paragraph_div">
+                                                            <p className="truncate-all faq_description_paragraph">
+                                                                {faq_2_Description}
+                                                            </p>
+                                                        </div>
+                                                    </font>
+                                                </div>
+                                                <div className="faq_left_right no-highlight" onClick={() => setActivefaq(3)}>
+                                                    <MdKeyboardDoubleArrowRight size={20} />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )}
+
+
+
+                                    <div className="support_content_parent_individual no-highlight" onClick={() => setActivefaq(3)}>
+                                        <div>
+                                            <FaSuitcaseRolling size={20} />
+                                        </div>
+                                        <div>
+                                            Baggage Policy
+                                        </div>
+                                    </div>
+
+                                    {activefaq === 3 && (
+                                        <div className="overlay">
+                                            <div
+                                                className="mini_faq"
+                                                ref={screenRef}
+                                                onTouchStart={handleTouchStart}
+                                                onTouchMove={handleTouchMove}
+                                                onTouchEnd={handleTouchEnd}
+                                            >
+                                                <div className="faq_left_arrow no-highlight" onClick={() => setActivefaq(2)}>
+                                                    <MdKeyboardDoubleArrowLeft size={20} />
+                                                </div>
+                                                <div className="faw_content_div">
+                                                    <font className='faq_title_font_mini_faq'>
+                                                        <div className="faq_information_content">
+                                                            <div className="faq_icons">
+                                                                <FaSuitcaseRolling size={22} />
+                                                            </div>
+                                                            <div>
+                                                                Baggage Policy
+                                                            </div>
+                                                        </div>
+                                                    </font>
+                                                    <font className='faq_description_font_mini_faq'>
+                                                        <div className="faq_paragraph_div">
+                                                            <p className="truncate-all our_expertise_description_paragraph">
+                                                                {faq_3_Description}
+                                                            </p>
+                                                        </div>
+                                                    </font>
+                                                </div>
+                                                <div className="faq_left_right no-highlight" onClick={() => setActivefaq(4)}>
+                                                    <MdKeyboardDoubleArrowRight size={20} />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )}
+
+
+
+
+                                    <div className="support_content_parent_individual no-highlight" onClick={() => setActivefaq(4)}>
+                                        <div>
+                                            <FaBagShopping size={18} />
+                                        </div>
+                                        <div>
+                                            Cabin Baggage
+                                        </div>
+                                    </div>
+
+                                    {activefaq === 4 && (
+                                        <div className="overlay">
+                                            <div
+                                                className="mini_faq"
+                                                ref={screenRef}
+                                                onTouchStart={handleTouchStart}
+                                                onTouchMove={handleTouchMove}
+                                                onTouchEnd={handleTouchEnd}
+                                            >
+                                                <div className="faq_left_arrow no-highlight" onClick={() => setActivefaq(3)}>
+                                                    <MdKeyboardDoubleArrowLeft size={20} />
+                                                </div>
+                                                <div className="faw_content_div">
+                                                    <font className='faq_title_font_mini_faq'>
+                                                        <div className="faq_information_content">
+                                                            <div className="faq_icons">
+                                                                <FaBagShopping size={20} />
+                                                            </div>
+                                                            <div>
+                                                                Cabin Baggage
+                                                            </div>
+                                                        </div>
+                                                    </font>
+                                                    <font className='faq_description_font_mini_faq'>
+                                                        <div className="faq_paragraph_div">
+                                                            <p className="truncate-all our_expertise_description_paragraph">
+                                                                {faq_4_Description}
+                                                            </p>
+                                                        </div>
+                                                    </font>
+                                                </div>
+                                                <div className="faq_left_right no-highlight" onClick={() => setActivefaq(5)}>
+                                                    <MdKeyboardDoubleArrowRight size={20} />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )}
+
+
+
+
+                                    <div className="support_content_parent_individual no-highlight" onClick={() => setActivefaq(5)}>
+                                        <div>
+                                            <RiSuitcase3Fill size={20} />
+                                        </div>
+                                        <div>
+                                            Excess Baggage
+                                        </div>
+                                    </div>
+
+                                    {activefaq === 5 && (
+                                        <div className="overlay">
+                                            <div
+                                                className="mini_faq"
+                                                ref={screenRef}
+                                                onTouchStart={handleTouchStart}
+                                                onTouchMove={handleTouchMove}
+                                                onTouchEnd={handleTouchEnd}
+                                            >
+                                                <div className="faq_left_arrow no-highlight" onClick={() => setActivefaq(4)}>
+                                                    <MdKeyboardDoubleArrowLeft size={20} />
+                                                </div>
+                                                <div className="faw_content_div">
+                                                    <font className='faq_title_font_mini_faq'>
+                                                        <div className="faq_information_content">
+                                                            <div className="faq_icons">
+                                                                <RiSuitcase3Fill size={22} />
+                                                            </div>
+                                                            <div>
+                                                                Excess Baggage
+                                                            </div>
+                                                        </div>
+                                                    </font>
+                                                    <font className='faq_description_font_mini_faq'>
+                                                        <div className="faq_paragraph_div">
+                                                            <p className="truncate-all our_expertise_description_paragraph">
+                                                                {faq_5_Description}
+                                                            </p>
+                                                        </div>
+                                                    </font>
+                                                </div>
+                                                <div className="faq_left_right no-highlight" onClick={() => setActivefaq(6)}>
+                                                    <MdKeyboardDoubleArrowRight size={20} />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )}
+
+
+
+
+                                    <div className="support_content_parent_individual no-highlight" onClick={() => setActivefaq(6)}>
+                                        <div>
+                                            <MdAirlineSeatReclineExtra size={20} />
+                                        </div>
+                                        <div>
+                                            Seat Selection
+                                        </div>
+                                    </div>
+
+                                    {activefaq === 6 && (
+                                        <div className="overlay">
+                                            <div
+                                                className="mini_faq"
+                                                ref={screenRef}
+                                                onTouchStart={handleTouchStart}
+                                                onTouchMove={handleTouchMove}
+                                                onTouchEnd={handleTouchEnd}
+                                            >
+                                                <div className="faq_left_arrow no-highlight" onClick={() => setActivefaq(5)}>
+                                                    <MdKeyboardDoubleArrowLeft size={20} />
+                                                </div>
+                                                <div className="faw_content_div">
+                                                    <font className='faq_title_font_mini_faq'>
+                                                        <div className="faq_information_content">
+                                                            <div className="faq_icons">
+                                                                <MdAirlineSeatReclineExtra size={22} />
+                                                            </div>
+                                                            <div>
+                                                                Seat Selection
+                                                            </div>
+                                                        </div>
+                                                    </font>
+                                                    <font className='faq_description_font_mini_faq'>
+                                                        <div className="faq_paragraph_div">
+                                                            <p className="truncate-all our_expertise_description_paragraph">
+                                                                {faq_6_Description}
+                                                            </p>
+                                                        </div>
+                                                    </font>
+                                                </div>
+                                                <div className="faq_left_right no-highlight" onClick={() => setActivefaq(7)}>
+                                                    <MdKeyboardDoubleArrowRight size={20} />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )}
+
+
+
+
+                                    <div className="support_content_parent_individual no-highlight" onClick={() => setActivefaq(7)}>
+                                        <div>
+                                            <TbStatusChange size={20} />
+                                        </div>
+                                        <div>
+                                            Flight Changes
+                                        </div>
+                                    </div>
+
+                                    {activefaq === 7 && (
+                                        <div className="overlay">
+                                            <div
+                                                className="mini_faq"
+                                                ref={screenRef}
+                                                onTouchStart={handleTouchStart}
+                                                onTouchMove={handleTouchMove}
+                                                onTouchEnd={handleTouchEnd}
+                                            >
+                                                <div className="faq_left_arrow no-highlight" onClick={() => setActivefaq(6)}>
+                                                    <MdKeyboardDoubleArrowLeft size={20} />
+                                                </div>
+                                                <div className="faw_content_div">
+                                                    <font className='faq_title_font_mini_faq'>
+                                                        <div className="faq_information_content">
+                                                            <div className="faq_icons">
+                                                                <TbStatusChange size={22} />
+                                                            </div>
+                                                            <div>
+                                                                Flight Changes
+                                                            </div>
+                                                        </div>
+                                                    </font>
+                                                    <font className='faq_description_font_mini_faq'>
+                                                        <div className="faq_paragraph_div">
+                                                            <p className="truncate-all our_expertise_description_paragraph">
+                                                                {faq_7_Description}
+                                                            </p>
+                                                        </div>
+                                                    </font>
+                                                </div>
+                                                <div className="faq_left_right no-highlight" onClick={() => setActivefaq(8)}>
+                                                    <MdKeyboardDoubleArrowRight size={20} />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )}
+
+
+
+
+                                    <div className="support_content_parent_individual no-highlight" onClick={() => setActivefaq(8)}>
+                                        <div>
+                                            <FaPlaneSlash size={20} />
+                                        </div>
+                                        <div>
+                                            Cancellations
+                                        </div>
+                                    </div>
+
+                                    {activefaq === 8 && (
+                                        <div className="overlay">
+                                            <div
+                                                className="mini_faq"
+                                                ref={screenRef}
+                                                onTouchStart={handleTouchStart}
+                                                onTouchMove={handleTouchMove}
+                                                onTouchEnd={handleTouchEnd}
+                                            >
+                                                <div className="faq_left_arrow no-highlight" onClick={() => setActivefaq(7)}>
+                                                    <MdKeyboardDoubleArrowLeft size={20} />
+                                                </div>
+                                                <div className="faw_content_div">
+                                                    <font className='faq_title_font_mini_faq'>
+                                                        <div className="faq_information_content">
+                                                            <div className="faq_icons">
+                                                                <FaPlaneSlash size={22} />
+                                                            </div>
+                                                            <div>
+                                                                Cancellations
+                                                            </div>
+                                                        </div>
+                                                    </font>
+                                                    <font className='faq_description_font_mini_faq'>
+                                                        <div className="faq_paragraph_div">
+                                                            <p className="truncate-all our_expertise_description_paragraph">
+                                                                {faq_8_Description}
+                                                            </p>
+                                                        </div>
+                                                    </font>
+                                                </div>
+                                                <div className="faq_left_right no-highlight" onClick={() => setActivefaq(9)}>
+                                                    <MdKeyboardDoubleArrowRight size={20} />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )}
+
+
+
+
+                                    <div className="support_content_parent_individual no-highlight" onClick={() => setActivefaq(9)}>
+                                        <div>
+                                            <RiRefund2Fill size={20} />
+                                        </div>
+                                        <div>
+                                            Refund Status
+                                        </div>
+                                    </div>
+
+                                    {activefaq === 9 && (
+                                        <div className="overlay">
+                                            <div
+                                                className="mini_faq"
+                                                ref={screenRef}
+                                                onTouchStart={handleTouchStart}
+                                                onTouchMove={handleTouchMove}
+                                                onTouchEnd={handleTouchEnd}
+                                            >
+                                                <div className="faq_left_arrow no-highlight" onClick={() => setActivefaq(8)}>
+                                                    <MdKeyboardDoubleArrowLeft size={20} />
+                                                </div>
+                                                <div className="faw_content_div">
+                                                    <font className='faq_title_font_mini_faq'>
+                                                        <div className="faq_information_content">
+                                                            <div className="faq_icons">
+                                                                <RiRefund2Fill size={22} />
+                                                            </div>
+                                                            <div>
+                                                                Refund Status
+                                                            </div>
+                                                        </div>
+                                                    </font>
+                                                    <font className='faq_description_font_mini_faq'>
+                                                        <div className="faq_paragraph_div">
+                                                            <p className="truncate-all our_expertise_description_paragraph">
+                                                                {faq_9_Description}
+                                                            </p>
+                                                        </div>
+                                                    </font>
+                                                </div>
+                                                <div className="faq_left_right no-highlight" onClick={() => setActivefaq(10)}>
+                                                    <MdKeyboardDoubleArrowRight size={20} />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )}
+
+
+
+
+                                    <div className="support_content_parent_individual no-highlight" onClick={() => setActivefaq(10)}>
+                                        <div>
+                                            <FaPassport size={16} />
+                                        </div>
+                                        <div>
+                                            Travel Documents
+                                        </div>
+                                    </div>
+
+                                    {activefaq === 10 && (
+                                        <div className="overlay">
+                                            <div
+                                                className="mini_faq"
+                                                ref={screenRef}
+                                                onTouchStart={handleTouchStart}
+                                                onTouchMove={handleTouchMove}
+                                                onTouchEnd={handleTouchEnd}
+                                            >
+                                                <div className="faq_left_arrow no-highlight" onClick={() => setActivefaq(9)}>
+                                                    <MdKeyboardDoubleArrowLeft size={20} />
+                                                </div>
+                                                <div className="faw_content_div">
+                                                    <font className='faq_title_font_mini_faq'>
+                                                        <div className="faq_information_content">
+                                                            <div className="faq_icons">
+                                                                <FaPassport size={18} />
+                                                            </div>
+                                                            <div>
+                                                                Travel Documents
+                                                            </div>
+                                                        </div>
+                                                    </font>
+                                                    <font className='faq_description_font_mini_faq'>
+                                                        <div className="faq_paragraph_div">
+                                                            <p className="truncate-all our_expertise_description_paragraph">
+                                                                {faq_10_Description}
+                                                            </p>
+                                                        </div>
+                                                    </font>
+                                                </div>
+                                                <div className="faq_left_right no-highlight" onClick={() => setActivefaq(11)}>
+                                                    <MdKeyboardDoubleArrowRight size={20} />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )}
+
+
+
+
+                                    <div className="support_content_parent_individual no-highlight" onClick={() => setActivefaq(11)}>
+                                        <div>
+                                            <FaUserCheck size={20} />
+                                        </div>
+                                        <div>
+                                            Web Check-In
+                                        </div>
+                                    </div>
+
+                                    {activefaq === 11 && (
+                                        <div className="overlay">
+                                            <div
+                                                className="mini_faq"
+                                                ref={screenRef}
+                                                onTouchStart={handleTouchStart}
+                                                onTouchMove={handleTouchMove}
+                                                onTouchEnd={handleTouchEnd}
+                                            >
+                                                <div className="faq_left_arrow no-highlight" onClick={() => setActivefaq(10)}>
+                                                    <MdKeyboardDoubleArrowLeft size={20} />
+                                                </div>
+                                                <div className="faw_content_div">
+                                                    <font className='faq_title_font_mini_faq'>
+                                                        <div className="faq_information_content">
+                                                            <div className="faq_icons">
+                                                                <FaUserCheck size={22} />
+                                                            </div>
+                                                            <div>
+                                                                Web Check-In
+                                                            </div>
+                                                        </div>
+                                                    </font>
+                                                    <font className='faq_description_font_mini_faq'>
+                                                        <div className="faq_paragraph_div">
+                                                            <p className="truncate-all our_expertise_description_paragraph">
+                                                                {faq_11_Description}
+                                                            </p>
+                                                        </div>
+                                                    </font>
+                                                </div>
+                                                <div className="faq_left_right no-highlight" onClick={() => setActivefaq(12)}>
+                                                    <MdKeyboardDoubleArrowRight size={20} />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )}
+
+
+
+
+                                    <div className="support_content_parent_individual no-highlight" onClick={() => setActivefaq(12)}>
+                                        <div>
+                                            <LuTicketsPlane size={20} />
+                                        </div>
+                                        <div>
+                                            Flight Status
+                                        </div>
+                                    </div>
+
+                                    {activefaq === 12 && (
+                                        <div className="overlay">
+                                            <div
+                                                className="mini_faq"
+                                                ref={screenRef}
+                                                onTouchStart={handleTouchStart}
+                                                onTouchMove={handleTouchMove}
+                                                onTouchEnd={handleTouchEnd}
+                                            >
+                                                <div className="faq_left_arrow no-highlight" onClick={() => setActivefaq(11)}>
+                                                    <MdKeyboardDoubleArrowLeft size={20} />
+                                                </div>
+                                                <div className="faw_content_div">
+                                                    <font className='faq_title_font_mini_faq'>
+                                                        <div className="faq_information_content">
+                                                            <div className="faq_icons">
+                                                                <LuTicketsPlane size={22} />
+                                                            </div>
+                                                            <div>
+                                                                Flight Status
+                                                            </div>
+                                                        </div>
+                                                    </font>
+                                                    <font className='faq_description_font_mini_faq'>
+                                                        <div className="faq_paragraph_div">
+                                                            <p className="truncate-all our_expertise_description_paragraph">
+                                                                {faq_12_Description}
+                                                            </p>
+                                                        </div>
+                                                    </font>
+                                                </div>
+                                                <div className="faq_left_right no-highlight" onClick={() => setActivefaq(13)}>
+                                                    <MdKeyboardDoubleArrowRight size={20} />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )}
+
+
+
+
+                                    <div className="support_content_parent_individual no-highlight" onClick={() => setActivefaq(13)}>
+                                        <div>
+                                            <MdAssistantDirection size={20} />
+                                        </div>
+                                        <div>
+                                            Special Assistance
+                                        </div>
+                                    </div>
+
+                                    {activefaq === 13 && (
+                                        <div className="overlay">
+                                            <div
+                                                className="mini_faq"
+                                                ref={screenRef}
+                                                onTouchStart={handleTouchStart}
+                                                onTouchMove={handleTouchMove}
+                                                onTouchEnd={handleTouchEnd}
+                                            >
+                                                <div className="faq_left_arrow no-highlight" onClick={() => setActivefaq(12)}>
+                                                    <MdKeyboardDoubleArrowLeft size={20} />
+                                                </div>
+                                                <div className="faw_content_div">
+                                                    <font className='faq_title_font_mini_faq'>
+                                                        <div className="faq_information_content">
+                                                            <div className="faq_icons">
+                                                                <MdAssistantDirection size={22} />
+                                                            </div>
+                                                            <div>
+                                                                Special Assistance
+                                                            </div>
+                                                        </div>
+                                                    </font>
+                                                    <font className='faq_description_font_mini_faq'>
+                                                        <div className="faq_paragraph_div">
+                                                            <p className="truncate-all our_expertise_description_paragraph">
+                                                                {faq_13_Description}
+                                                            </p>
+                                                        </div>
+                                                    </font>
+                                                </div>
+                                                <div className="faq_left_right no-highlight" onClick={() => setActivefaq(14)}>
+                                                    <MdKeyboardDoubleArrowRight size={20} />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )}
+
+
+
+
+                                    <div className="support_content_parent_individual no-highlight" onClick={() => setActivefaq(14)}>
+                                        <div>
+                                            <FaBriefcaseMedical size={17} />
+                                        </div>
+                                        <div>
+                                            Medical Travel
+                                        </div>
+                                    </div>
+
+                                    {activefaq === 14 && (
+                                        <div className="overlay">
+                                            <div
+                                                className="mini_faq"
+                                                ref={screenRef}
+                                                onTouchStart={handleTouchStart}
+                                                onTouchMove={handleTouchMove}
+                                                onTouchEnd={handleTouchEnd}
+                                            >
+                                                <div className="faq_left_arrow no-highlight" onClick={() => setActivefaq(13)}>
+                                                    <MdKeyboardDoubleArrowLeft size={20} />
+                                                </div>
+                                                <div className="faw_content_div">
+                                                    <font className='faq_title_font_mini_faq'>
+                                                        <div className="faq_information_content">
+                                                            <div className="faq_icons">
+                                                                <FaBriefcaseMedical size={20} />
+                                                            </div>
+                                                            <div>
+                                                                Medical Travel
+                                                            </div>
+                                                        </div>
+                                                    </font>
+                                                    <font className='faq_description_font_mini_faq'>
+                                                        <div className="faq_paragraph_div">
+                                                            <p className="truncate-all our_expertise_description_paragraph">
+                                                                {faq_14_Description}
+                                                            </p>
+                                                        </div>
+                                                    </font>
+                                                </div>
+                                                <div className="faq_left_right no-highlight" onClick={() => setActivefaq(15)}>
+                                                    <MdKeyboardDoubleArrowRight size={20} />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )}
+
+
+
+
+                                    <div className="support_content_parent_individual no-highlight" onClick={() => setActivefaq(15)}>
+                                        <div>
+                                            <IoFastFoodSharp size={18} />
+                                        </div>
+                                        <div>
+                                            In-Flight Meals
+                                        </div>
+                                    </div>
+
+                                    {activefaq === 15 && (
+                                        <div className="overlay">
+                                            <div
+                                                className="mini_faq"
+                                                ref={screenRef}
+                                                onTouchStart={handleTouchStart}
+                                                onTouchMove={handleTouchMove}
+                                                onTouchEnd={handleTouchEnd}
+                                            >
+                                                <div className="faq_left_arrow no-highlight" onClick={() => setActivefaq(14)}>
+                                                    <MdKeyboardDoubleArrowLeft size={20} />
+                                                </div>
+                                                <div className="faw_content_div">
+                                                    <font className='faq_title_font_mini_faq'>
+                                                        <div className="faq_information_content">
+                                                            <div className="faq_icons">
+                                                                <IoFastFoodSharp size={20} />
+                                                            </div>
+                                                            <div>
+                                                                In-Flight Meals
+                                                            </div>
+                                                        </div>
+                                                    </font>
+                                                    <font className='faq_description_font_mini_faq'>
+                                                        <div className="faq_paragraph_div">
+                                                            <p className="truncate-all our_expertise_description_paragraph">
+                                                                {faq_15_Description}
+                                                            </p>
+                                                        </div>
+                                                    </font>
+                                                </div>
+                                                <div className="faq_left_right no-highlight" onClick={() => setActivefaq(16)}>
+                                                    <MdKeyboardDoubleArrowRight size={20} />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )}
+
+
+
+
+                                    <div className="support_content_parent_individual no-highlight" onClick={() => setActivefaq(16)}>
+                                        <div>
+                                            <FaPlaneCircleExclamation size={20} />
+                                        </div>
+                                        <div>
+                                            Flight Delays
+                                        </div>
+                                    </div>
+
+                                    {activefaq === 16 && (
+                                        <div className="overlay">
+                                            <div
+                                                className="mini_faq"
+                                                ref={screenRef}
+                                                onTouchStart={handleTouchStart}
+                                                onTouchMove={handleTouchMove}
+                                                onTouchEnd={handleTouchEnd}
+                                            >
+                                                <div className="faq_left_arrow no-highlight" onClick={() => setActivefaq(15)}>
+                                                    <MdKeyboardDoubleArrowLeft size={20} />
+                                                </div>
+                                                <div className="faw_content_div">
+                                                    <font className='faq_title_font_mini_faq'>
+                                                        <div className="faq_information_content">
+                                                            <div className="faq_icons">
+                                                                <FaPlaneCircleExclamation size={22} />
+                                                            </div>
+                                                            <div>
+                                                                Flight Delays
+                                                            </div>
+                                                        </div>
+                                                    </font>
+                                                    <font className='faq_description_font_mini_faq'>
+                                                        <div className="faq_paragraph_div">
+                                                            <p className="truncate-all our_expertise_description_paragraph">
+                                                                {faq_16_Description}
+                                                            </p>
+                                                        </div>
+                                                    </font>
+                                                </div>
+                                                <div className="faq_left_right no-highlight" onClick={() => setActivefaq(17)}>
+                                                    <MdKeyboardDoubleArrowRight size={20} />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )}
+
+
+
+
+                                    <div className="support_content_parent_individual no-highlight" onClick={() => setActivefaq(17)}>
+                                        <div>
+                                            <FaPlaneDeparture size={20} />
+                                        </div>
+                                        <div>
+                                            Missed Flights
+                                        </div>
+                                    </div>
+
+                                    {activefaq === 17 && (
+                                        <div className="overlay">
+                                            <div
+                                                className="mini_faq"
+                                                ref={screenRef}
+                                                onTouchStart={handleTouchStart}
+                                                onTouchMove={handleTouchMove}
+                                                onTouchEnd={handleTouchEnd}
+                                            >
+                                                <div className="faq_left_arrow no-highlight" onClick={() => setActivefaq(16)}>
+                                                    <MdKeyboardDoubleArrowLeft size={20} />
+                                                </div>
+                                                <div className="faw_content_div">
+                                                    <font className='faq_title_font_mini_faq'>
+                                                        <div className="faq_information_content">
+                                                            <div className="faq_icons">
+                                                                <FaPlaneDeparture size={22} />
+                                                            </div>
+                                                            <div>
+                                                                Missed Flights
+                                                            </div>
+                                                        </div>
+                                                    </font>
+                                                    <font className='faq_description_font_mini_faq'>
+                                                        <div className="faq_paragraph_div">
+                                                            <p className="truncate-all our_expertise_description_paragraph">
+                                                                {faq_17_Description}
+                                                            </p>
+                                                        </div>
+                                                    </font>
+                                                </div>
+                                                <div className="faq_left_right no-highlight" onClick={() => setActivefaq(18)}>
+                                                    <MdKeyboardDoubleArrowRight size={20} />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )}
+
+
+
+
+                                    <div className="support_content_parent_individual no-highlight" onClick={() => setActivefaq(18)}>
+                                        <div>
+                                            <FaPeopleGroup size={20} />
+                                        </div>
+                                        <div>
+                                            Group Booking
+                                        </div>
+                                    </div>
+
+                                    {activefaq === 18 && (
+                                        <div className="overlay">
+                                            <div
+                                                className="mini_faq"
+                                                ref={screenRef}
+                                                onTouchStart={handleTouchStart}
+                                                onTouchMove={handleTouchMove}
+                                                onTouchEnd={handleTouchEnd}
+                                            >
+                                                <div className="faq_left_arrow no-highlight" onClick={() => setActivefaq(17)}>
+                                                    <MdKeyboardDoubleArrowLeft size={20} />
+                                                </div>
+                                                <div className="faw_content_div">
+                                                    <font className='faq_title_font_mini_faq'>
+                                                        <div className="faq_information_content">
+                                                            <div className="faq_icons">
+                                                                <FaPeopleGroup size={22} />
+                                                            </div>
+                                                            <div>
+                                                                Group Booking
+                                                            </div>
+                                                        </div>
+                                                    </font>
+                                                    <font className='faq_description_font_mini_faq'>
+                                                        <div className="faq_paragraph_div">
+                                                            <p className="truncate-all our_expertise_description_paragraph">
+                                                                {faq_18_Description}
+                                                            </p>
+                                                        </div>
+                                                    </font>
+                                                </div>
+                                                <div className="faq_left_right no-highlight" onClick={() => setActivefaq(19)}>
+                                                    <MdKeyboardDoubleArrowRight size={20} />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )}
+
+
+
+
+                                    <div className="support_content_parent_individual no-highlight" onClick={() => setActivefaq(19)}>
+                                        <div>
+                                            <MdPets size={18} />
+                                        </div>
+                                        <div>
+                                            Pet Travel
+                                        </div>
+                                    </div>
+
+                                    {activefaq === 19 && (
+                                        <div className="overlay">
+                                            <div
+                                                className="mini_faq"
+                                                ref={screenRef}
+                                                onTouchStart={handleTouchStart}
+                                                onTouchMove={handleTouchMove}
+                                                onTouchEnd={handleTouchEnd}
+                                            >
+                                                <div className="faq_left_arrow no-highlight" onClick={() => setActivefaq(18)}>
+                                                    <MdKeyboardDoubleArrowLeft size={20} />
+                                                </div>
+                                                <div className="faw_content_div">
+                                                    <font className='faq_title_font_mini_faq'>
+                                                        <div className="faq_information_content">
+                                                            <div className="faq_icons">
+                                                                <MdPets size={20} />
+                                                            </div>
+                                                            <div>
+                                                                Pet Travel
+                                                            </div>
+                                                        </div>
+                                                    </font>
+                                                    <font className='faq_description_font_mini_faq'>
+                                                        <div className="faq_paragraph_div">
+                                                            <p className="truncate-all our_expertise_description_paragraph">
+                                                                {faq_19_Description}
+                                                            </p>
+                                                        </div>
+                                                    </font>
+                                                </div>
+                                                <div className="faq_left_right no-highlight" onClick={() => setActivefaq(20)}>
+                                                    <MdKeyboardDoubleArrowRight size={20} />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )}
+
+
+
+
+                                    <div className="support_content_parent_individual no-highlight" onClick={() => setActivefaq(20)}>
+                                        <div>
+                                            <RiCustomerService2Fill size={20} />
+                                        </div>
+                                        <div>
+                                            Customer Support
+                                        </div>
+                                    </div>
+
+                                    {activefaq === 20 && (
+                                        <div className="overlay">
+                                            <div
+                                                className="mini_faq"
+                                                ref={screenRef}
+                                                onTouchStart={handleTouchStart}
+                                                onTouchMove={handleTouchMove}
+                                                onTouchEnd={handleTouchEnd}
+                                            >
+                                                <div className="faq_left_arrow no-highlight" onClick={() => setActivefaq(19)}>
+                                                    <MdKeyboardDoubleArrowLeft size={20} />
+                                                </div>
+                                                <div className="faw_content_div">
+                                                    <font className='faq_title_font_mini_faq'>
+                                                        <div className="faq_information_content">
+                                                            <div className="faq_icons">
+                                                                <RiCustomerService2Fill size={22} />
+                                                            </div>
+                                                            <div>
+                                                                Customer Support
+                                                            </div>
+                                                        </div>
+                                                    </font>
+                                                    <font className='faq_description_font_mini_faq'>
+                                                        <div className="faq_paragraph_div">
+                                                            <p className="truncate-all our_expertise_description_paragraph">
+                                                                {faq_20_Description}
+                                                            </p>
+                                                        </div>
+                                                    </font>
+                                                </div>
+                                                <div className="faq_left_right no-highlight" onClick={() => setActivefaq(1)}>
+                                                    <MdKeyboardDoubleArrowRight size={20} />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )}
+
+
+
+
+                                </div>
+                            </font>
                         </div>
                     </div>
                 )

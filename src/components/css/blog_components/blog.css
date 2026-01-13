@@ -11,7 +11,7 @@
     .blog_page_content {
         grid-template-columns: repeat(1, 1fr);
         padding: 20px 0px 0px 0px;
-        gap: 20px;
+        gap: 30px;
 
     }
 }
@@ -19,8 +19,6 @@
 
 .blog_content_individual {
     display: flex;
-    /* justify-content: center; */
-    /* align-items: center; */
     flex-direction: column;
 
     background-color: #FFFDF7;
@@ -29,6 +27,7 @@
     padding-bottom: 12px;
     border-radius: 6px;
     cursor: pointer;
+    /* border: 2px solid black; */
 }
 
 
