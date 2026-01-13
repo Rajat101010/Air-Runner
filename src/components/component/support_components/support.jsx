@@ -105,7 +105,7 @@ function Support() {
 
 
 
-    
+
 
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
@@ -180,46 +180,6 @@ function Support() {
         window.addEventListener("keydown", handleKeyDown);
         return () => window.removeEventListener("keydown", handleKeyDown);
     }, [activefaq]);
-
-
-
-
-
-
-
-
-
-    const touchStartX = useRef(0);
-    const touchEndX = useRef(0);
-
-
-    const handleTouchStart = (e) => {
-        touchStartX.current = e.touches[0].clientX;
-    };
-
-    const handleTouchMove = (e) => {
-        touchEndX.current = e.touches[0].clientX;
-    };
-
-    const handleTouchEnd = () => {
-        const diff = touchStartX.current - touchEndX.current;
-
-        if (Math.abs(diff) < 50) return; // ignore tiny swipes
-
-        // swipe right → left (NEXT)
-        if (diff > 0) {
-            setActivefaq((prev) =>
-                prev === TOTAL_FAQS ? 1 : prev + 1
-            );
-        }
-
-        // swipe left → right (PREV)
-        if (diff < 0) {
-            setActivefaq((prev) =>
-                prev === 1 ? TOTAL_FAQS : prev - 1
-            );
-        }
-    };
 
 
 
@@ -714,9 +674,6 @@ function Support() {
                                             <div
                                                 className="mini_faq"
                                                 ref={screenRef}
-                                                onTouchStart={handleTouchStart}
-                                                onTouchMove={handleTouchMove}
-                                                onTouchEnd={handleTouchEnd}
                                             >
                                                 <div className="faq_left_arrow no-highlight" onClick={() => setActivefaq(20)}>
                                                     <MdKeyboardDoubleArrowLeft size={20} />
@@ -763,9 +720,6 @@ function Support() {
                                             <div
                                                 className="mini_faq"
                                                 ref={screenRef}
-                                                onTouchStart={handleTouchStart}
-                                                onTouchMove={handleTouchMove}
-                                                onTouchEnd={handleTouchEnd}
                                             >
                                                 <div className="faq_left_arrow no-highlight" onClick={() => setActivefaq(1)}>
                                                     <MdKeyboardDoubleArrowLeft size={20} />
@@ -812,9 +766,6 @@ function Support() {
                                             <div
                                                 className="mini_faq"
                                                 ref={screenRef}
-                                                onTouchStart={handleTouchStart}
-                                                onTouchMove={handleTouchMove}
-                                                onTouchEnd={handleTouchEnd}
                                             >
                                                 <div className="faq_left_arrow no-highlight" onClick={() => setActivefaq(2)}>
                                                     <MdKeyboardDoubleArrowLeft size={20} />
@@ -862,9 +813,6 @@ function Support() {
                                             <div
                                                 className="mini_faq"
                                                 ref={screenRef}
-                                                onTouchStart={handleTouchStart}
-                                                onTouchMove={handleTouchMove}
-                                                onTouchEnd={handleTouchEnd}
                                             >
                                                 <div className="faq_left_arrow no-highlight" onClick={() => setActivefaq(3)}>
                                                     <MdKeyboardDoubleArrowLeft size={20} />
@@ -912,9 +860,6 @@ function Support() {
                                             <div
                                                 className="mini_faq"
                                                 ref={screenRef}
-                                                onTouchStart={handleTouchStart}
-                                                onTouchMove={handleTouchMove}
-                                                onTouchEnd={handleTouchEnd}
                                             >
                                                 <div className="faq_left_arrow no-highlight" onClick={() => setActivefaq(4)}>
                                                     <MdKeyboardDoubleArrowLeft size={20} />
@@ -962,9 +907,6 @@ function Support() {
                                             <div
                                                 className="mini_faq"
                                                 ref={screenRef}
-                                                onTouchStart={handleTouchStart}
-                                                onTouchMove={handleTouchMove}
-                                                onTouchEnd={handleTouchEnd}
                                             >
                                                 <div className="faq_left_arrow no-highlight" onClick={() => setActivefaq(5)}>
                                                     <MdKeyboardDoubleArrowLeft size={20} />
@@ -1012,9 +954,6 @@ function Support() {
                                             <div
                                                 className="mini_faq"
                                                 ref={screenRef}
-                                                onTouchStart={handleTouchStart}
-                                                onTouchMove={handleTouchMove}
-                                                onTouchEnd={handleTouchEnd}
                                             >
                                                 <div className="faq_left_arrow no-highlight" onClick={() => setActivefaq(6)}>
                                                     <MdKeyboardDoubleArrowLeft size={20} />
@@ -1062,9 +1001,6 @@ function Support() {
                                             <div
                                                 className="mini_faq"
                                                 ref={screenRef}
-                                                onTouchStart={handleTouchStart}
-                                                onTouchMove={handleTouchMove}
-                                                onTouchEnd={handleTouchEnd}
                                             >
                                                 <div className="faq_left_arrow no-highlight" onClick={() => setActivefaq(7)}>
                                                     <MdKeyboardDoubleArrowLeft size={20} />
@@ -1112,9 +1048,6 @@ function Support() {
                                             <div
                                                 className="mini_faq"
                                                 ref={screenRef}
-                                                onTouchStart={handleTouchStart}
-                                                onTouchMove={handleTouchMove}
-                                                onTouchEnd={handleTouchEnd}
                                             >
                                                 <div className="faq_left_arrow no-highlight" onClick={() => setActivefaq(8)}>
                                                     <MdKeyboardDoubleArrowLeft size={20} />
@@ -1162,9 +1095,6 @@ function Support() {
                                             <div
                                                 className="mini_faq"
                                                 ref={screenRef}
-                                                onTouchStart={handleTouchStart}
-                                                onTouchMove={handleTouchMove}
-                                                onTouchEnd={handleTouchEnd}
                                             >
                                                 <div className="faq_left_arrow no-highlight" onClick={() => setActivefaq(9)}>
                                                     <MdKeyboardDoubleArrowLeft size={20} />
@@ -1212,9 +1142,6 @@ function Support() {
                                             <div
                                                 className="mini_faq"
                                                 ref={screenRef}
-                                                onTouchStart={handleTouchStart}
-                                                onTouchMove={handleTouchMove}
-                                                onTouchEnd={handleTouchEnd}
                                             >
                                                 <div className="faq_left_arrow no-highlight" onClick={() => setActivefaq(10)}>
                                                     <MdKeyboardDoubleArrowLeft size={20} />
@@ -1262,9 +1189,6 @@ function Support() {
                                             <div
                                                 className="mini_faq"
                                                 ref={screenRef}
-                                                onTouchStart={handleTouchStart}
-                                                onTouchMove={handleTouchMove}
-                                                onTouchEnd={handleTouchEnd}
                                             >
                                                 <div className="faq_left_arrow no-highlight" onClick={() => setActivefaq(11)}>
                                                     <MdKeyboardDoubleArrowLeft size={20} />
@@ -1312,9 +1236,6 @@ function Support() {
                                             <div
                                                 className="mini_faq"
                                                 ref={screenRef}
-                                                onTouchStart={handleTouchStart}
-                                                onTouchMove={handleTouchMove}
-                                                onTouchEnd={handleTouchEnd}
                                             >
                                                 <div className="faq_left_arrow no-highlight" onClick={() => setActivefaq(12)}>
                                                     <MdKeyboardDoubleArrowLeft size={20} />
@@ -1362,9 +1283,6 @@ function Support() {
                                             <div
                                                 className="mini_faq"
                                                 ref={screenRef}
-                                                onTouchStart={handleTouchStart}
-                                                onTouchMove={handleTouchMove}
-                                                onTouchEnd={handleTouchEnd}
                                             >
                                                 <div className="faq_left_arrow no-highlight" onClick={() => setActivefaq(13)}>
                                                     <MdKeyboardDoubleArrowLeft size={20} />
@@ -1412,9 +1330,6 @@ function Support() {
                                             <div
                                                 className="mini_faq"
                                                 ref={screenRef}
-                                                onTouchStart={handleTouchStart}
-                                                onTouchMove={handleTouchMove}
-                                                onTouchEnd={handleTouchEnd}
                                             >
                                                 <div className="faq_left_arrow no-highlight" onClick={() => setActivefaq(14)}>
                                                     <MdKeyboardDoubleArrowLeft size={20} />
@@ -1462,9 +1377,6 @@ function Support() {
                                             <div
                                                 className="mini_faq"
                                                 ref={screenRef}
-                                                onTouchStart={handleTouchStart}
-                                                onTouchMove={handleTouchMove}
-                                                onTouchEnd={handleTouchEnd}
                                             >
                                                 <div className="faq_left_arrow no-highlight" onClick={() => setActivefaq(15)}>
                                                     <MdKeyboardDoubleArrowLeft size={20} />
@@ -1512,9 +1424,6 @@ function Support() {
                                             <div
                                                 className="mini_faq"
                                                 ref={screenRef}
-                                                onTouchStart={handleTouchStart}
-                                                onTouchMove={handleTouchMove}
-                                                onTouchEnd={handleTouchEnd}
                                             >
                                                 <div className="faq_left_arrow no-highlight" onClick={() => setActivefaq(16)}>
                                                     <MdKeyboardDoubleArrowLeft size={20} />
@@ -1562,9 +1471,6 @@ function Support() {
                                             <div
                                                 className="mini_faq"
                                                 ref={screenRef}
-                                                onTouchStart={handleTouchStart}
-                                                onTouchMove={handleTouchMove}
-                                                onTouchEnd={handleTouchEnd}
                                             >
                                                 <div className="faq_left_arrow no-highlight" onClick={() => setActivefaq(17)}>
                                                     <MdKeyboardDoubleArrowLeft size={20} />
@@ -1612,9 +1518,6 @@ function Support() {
                                             <div
                                                 className="mini_faq"
                                                 ref={screenRef}
-                                                onTouchStart={handleTouchStart}
-                                                onTouchMove={handleTouchMove}
-                                                onTouchEnd={handleTouchEnd}
                                             >
                                                 <div className="faq_left_arrow no-highlight" onClick={() => setActivefaq(18)}>
                                                     <MdKeyboardDoubleArrowLeft size={20} />
@@ -1662,9 +1565,6 @@ function Support() {
                                             <div
                                                 className="mini_faq"
                                                 ref={screenRef}
-                                                onTouchStart={handleTouchStart}
-                                                onTouchMove={handleTouchMove}
-                                                onTouchEnd={handleTouchEnd}
                                             >
                                                 <div className="faq_left_arrow no-highlight" onClick={() => setActivefaq(19)}>
                                                     <MdKeyboardDoubleArrowLeft size={20} />
