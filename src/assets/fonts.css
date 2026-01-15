@@ -618,3 +618,45 @@ medium
         color: #2466B3;
     }
 }
+
+.laptop_footer_title {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #053478;
+}
+
+.laptop_footer_description {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #6A9FE0;
+}
+
+.laptop_footer_description:hover {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #2466B3;
+}
+
+.laptop_footer_description_none {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #6A9FE0;
+}
+
+.copyright_font {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #053478;
+}
+
+.copyright_font_description {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #053478;
+}

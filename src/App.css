@@ -19,13 +19,13 @@
 
 body {
   padding-top: 55px;
-
-  padding-bottom: 55px;
+  padding-bottom: 0px;
 }
 
 @media (max-width: 768px) {
   body {
     padding-top: 45px;
+    padding-bottom: 55px;
   }
 }
 

@@ -194,7 +194,7 @@ function AboutUS() {
                                 loading="lazy"
                             />
                             <font className='our_expertise_individual_title_font'>
-                                Crew Member
+                                Crew Members
                             </font>
                         </div>
                     </Link>
@@ -220,7 +220,7 @@ function AboutUS() {
                                 loading="lazy"
                             />
                             <font className='our_expertise_individual_title_font'>
-                                Recognitions
+                                Recognization
                             </font>
                         </div>
                     </Link>
