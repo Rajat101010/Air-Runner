@@ -20,6 +20,13 @@ import about_image_4 from '../../../assets/about_pictures/4.webp'
 import about_image_5 from '../../../assets/about_pictures/5.webp'
 import about_image_6 from '../../../assets/about_pictures/6.webp'
 
+import { FaLinkedinIn } from "react-icons/fa6";
+import { LuGithub } from "react-icons/lu";
+import { FaUserSecret } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { SiGmail } from "react-icons/si";
+
+
 function AboutUS() {
     return (
         <main>
@@ -217,6 +224,42 @@ function AboutUS() {
                             </font>
                         </div>
                     </Link>
+                </div>
+                <div className="social_links_for_mobile_parent">
+                    <div>
+                        <font className='our_expertise_individual_title_font'>
+                            Connect with us
+                        </font>
+                    </div>
+                    <font className='about_us_social_icon_font'>
+                        <div className="social_links_for_mobile">
+                            <Link to="https://www.linkedin.com/in/rajat-raj-shah" className="no-highlight">
+                                <div className="no-highlight about_us_social_icon_font">
+                                    <FaLinkedinIn />
+                                </div>
+                            </Link>
+                            <Link to="https://github.com/Rajat101010" className="no-highlight">
+                                <div className="no-highlight about_us_social_icon_font">
+                                    <LuGithub />
+                                </div>
+                            </Link>
+                            <Link to="https://www.rajatrajshah.com.np" className="no-highlight">
+                                <div className="no-highlight about_us_social_icon_font">
+                                    <FaUserSecret />
+                                </div>
+                            </Link>
+                            <Link to="https://x.com/rajat_raj_shah" className="no-highlight">
+                                <div className="no-highlight about_us_social_icon_font">
+                                    <FaXTwitter />
+                                </div>
+                            </Link>
+                            <Link to="mailto:rajatrajshah@gmail.com" className="no-highlight">
+                                <div className="no-highlight about_us_social_icon_font">
+                                    <SiGmail />
+                                </div>
+                            </Link>
+                        </div>
+                    </font>
                 </div>
             </div>
         </main >

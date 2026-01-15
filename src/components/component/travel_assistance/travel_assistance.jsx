@@ -13,6 +13,10 @@ import travel_assistance_image_2 from '../../../assets/travel_assistance_picture
 import travel_assistance_image_3 from '../../../assets/travel_assistance_pictures/3.webp';
 import travel_assistance_image_4 from '../../../assets/travel_assistance_pictures/4.webp';
 import travel_assistance_image_5 from '../../../assets/travel_assistance_pictures/5.webp';
+import travel_assistance_image_6 from '../../../assets/travel_assistance_pictures/6.webp';
+import travel_assistance_image_7 from '../../../assets/travel_assistance_pictures/7.webp';
+import travel_assistance_image_8 from '../../../assets/travel_assistance_pictures/8.webp';
+import travel_assistance_image_9 from '../../../assets/travel_assistance_pictures/9.webp';
 
 function TravelAssistance() {
     return (
@@ -58,7 +62,7 @@ function TravelAssistance() {
                                 loading="lazy"
                             />
                             <font className='travel_assistance_individual_title_font'>
-                                Solo Child Travel
+                                Solo Child
                             </font>
                         </div>
                     </Link>
@@ -84,7 +88,7 @@ function TravelAssistance() {
                                 loading="lazy"
                             />
                             <font className='travel_assistance_individual_title_font'>
-                                First Time Travel
+                                First Time
                             </font>
                         </div>
                     </Link>
@@ -98,6 +102,64 @@ function TravelAssistance() {
                             />
                             <font className='travel_assistance_individual_title_font'>
                                 In-Cabin Pet
+                            </font>
+                        </div>
+                    </Link>
+
+
+
+
+
+
+                    <Link to="/" className="no-highlight">
+                        <div className="travel_assistance_page_content_individual travel_assistance_content_individual">
+                            <img
+                                src={travel_assistance_image_6}
+                                alt="travel assistance"
+                                className='travel_assistance_image'
+                                loading="lazy"
+                            />
+                            <font className='travel_assistance_individual_title_font'>
+                                Special Meals
+                            </font>
+                        </div>
+                    </Link>
+                    <Link to="/" className="no-highlight">
+                        <div className="travel_assistance_page_content_individual travel_assistance_content_individual">
+                            <img
+                                src={travel_assistance_image_7}
+                                alt="travel assistance"
+                                className='travel_assistance_image'
+                                loading="lazy"
+                            />
+                            <font className='travel_assistance_individual_title_font'>
+                                Elderly
+                            </font>
+                        </div>
+                    </Link>
+                    <Link to="/" className="no-highlight">
+                        <div className="travel_assistance_page_content_individual travel_assistance_content_individual">
+                            <img
+                                src={travel_assistance_image_8}
+                                alt="travel assistance"
+                                className='travel_assistance_image'
+                                loading="lazy"
+                            />
+                            <font className='travel_assistance_individual_title_font'>
+                                Visa Support
+                            </font>
+                        </div>
+                    </Link>
+                    <Link to="/" className="no-highlight">
+                        <div className="travel_assistance_page_content_individual travel_assistance_content_individual">
+                            <img
+                                src={travel_assistance_image_9}
+                                alt="travel assistance"
+                                className='travel_assistance_image'
+                                loading="lazy"
+                            />
+                            <font className='travel_assistance_individual_title_font'>
+                                Insurance
                             </font>
                         </div>
                     </Link>

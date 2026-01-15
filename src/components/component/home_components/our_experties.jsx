@@ -46,7 +46,7 @@ function OurExpertise() {
                         </div>
                     </Link>
                     <Link to="/" className="no-highlight">
-                        <div className="our_expertise_content_individual no-highlight our_expertise_content_no_show_on_mobile">
+                        <div className="our_expertise_content_individual no-highlight">
                             <img
                                 src={our_experties_image_2}
                                 alt="our experties"
@@ -59,7 +59,7 @@ function OurExpertise() {
                         </div>
                     </Link>
                     <Link to="/" className="no-highlight">
-                        <div className="our_expertise_content_individual no-highlight">
+                        <div className="our_expertise_content_individual no-highlight our_expertise_content_no_show_on_mobile">
                             <img
                                 src={our_experties_image_3}
                                 alt="our experties"

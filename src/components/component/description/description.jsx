@@ -166,3 +166,18 @@ bookings, flight changes, baggage concerns, and special requests. Available acro
 reliable help before, during, and after your journey—ensuring comfort, clarity, and confidence at every step of your travel 
 experience.
 `;
+
+export const TermsAndCondition_Description = `
+Air Runner’s Terms & Conditions outline user agreement, booking and payment rules, cancellation and refund policies, schedule 
+change handling, and passenger responsibilities. By using Air Runner’s services, passengers agree to comply with fare conditions, 
+travel documentation requirements, safety regulations, and conduct standards, while acknowledging that flight schedules and 
+services may change due to operational or regulatory reasons.
+`;
+
+
+export const Policy_Description = `
+Air Runner’s policies outline transparent booking and fares, flexible cancellation and refund rules, clear baggage allowances, 
+structured check-in and boarding procedures, dedicated special assistance services, and strong website privacy practices. 
+Together, these policies ensure passenger safety, data security, operational efficiency, and a smooth, reliable travel experience 
+from booking to arrival.
+`;

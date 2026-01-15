@@ -9,6 +9,8 @@ import { AiFillSafetyCertificate } from "react-icons/ai";
 import our_experties_image_1 from '../../../assets/our_expertise_pictures/1.webp'
 import our_experties_image_2 from '../../../assets/our_expertise_pictures/2.webp'
 import our_experties_image_3 from '../../../assets/our_expertise_pictures/3.webp'
+import our_experties_image_4 from '../../../assets/our_expertise_pictures/4.webp'
+import our_experties_image_5 from '../../../assets/our_expertise_pictures/5.webp'
 
 function OurExpertise() {
     return (
@@ -68,6 +70,32 @@ function OurExpertise() {
                             />
                             <font className='our_expertise_individual_title_font'>
                                 After-Flight Care
+                            </font>
+                        </div>
+                    </Link>
+                    <Link to="/" className="no-highlight">
+                        <div className="our_expertise_content_individual no-highlight">
+                            <img
+                                src={our_experties_image_4}
+                                alt="our experties"
+                                className='our_experties_image'
+                                loading="lazy"
+                            />
+                            <font className='our_expertise_individual_title_font'>
+                                Flight Planning
+                            </font>
+                        </div>
+                    </Link>
+                    <Link to="/" className="no-highlight">
+                        <div className="our_expertise_content_individual no-highlight">
+                            <img
+                                src={our_experties_image_5}
+                                alt="our experties"
+                                className='our_experties_image'
+                                loading="lazy"
+                            />
+                            <font className='our_expertise_individual_title_font'>
+                                Cabin Comfort
                             </font>
                         </div>
                     </Link>

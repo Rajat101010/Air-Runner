@@ -50,7 +50,7 @@ function TravelAssistance() {
                         </div>
                     </Link>
                     <Link to="/" className="no-highlight">
-                        <div className="travel_assistance_content_individual travel_assistance_content_no_show_on_mobile">
+                        <div className="travel_assistance_content_individual">
                             <img
                                 src={travel_assistance_image_2}
                                 alt="travel assistance"
@@ -89,7 +89,7 @@ function TravelAssistance() {
                         </div>
                     </Link>
                     <Link to="/" className="no-highlight">
-                        <div className="travel_assistance_content_individual">
+                        <div className="travel_assistance_content_individual travel_assistance_content_no_show_on_mobile">
                             <img
                                 src={travel_assistance_image_5}
                                 alt="travel assistance"

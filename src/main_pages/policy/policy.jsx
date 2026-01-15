@@ -1,6 +1,6 @@
 import HeaderNone from './../../components/component/header/header_none.jsx';
 
-// import OurExpertiseComponent from './../../components/component/our_experties_components/our_experties.jsx';
+import PolicyComponent from './../../components/component/policy_components/policy.jsx';
 
 
 import FooterNone from './../../components/component/footer/footer_none.jsx'
@@ -12,7 +12,7 @@ function Policy() {
     return (
             <main>
                 <HeaderNone />
-                {/* <OurExpertiseComponent /> */}
+                <PolicyComponent />
 
                 <FooterNone />
                 <LaptopFooter />

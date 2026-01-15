@@ -545,3 +545,76 @@ medium
         color: #2466B3;
     }
 }
+
+
+.about_us_social_icon_font {
+    color: #053478;
+    font-size: 1.3rem;
+}
+
+
+
+.tnc_page_content_title_font {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2466B3;
+}
+
+@media (max-width: 768px) {
+    .tnc_page_content_title_font {
+        font-family: 'Inter', sans-serif;
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: #2466B3;
+    }
+}
+
+.tnc_page_content_description_font {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #6A9FE0;
+}
+
+@media (max-width: 768px) {
+    .tnc_page_content_description_font {
+        font-family: 'Inter', sans-serif;
+        font-size: 0.7rem;
+        font-weight: 400;
+        color: #6A9FE0;
+    }
+}
+
+
+.title_title_tnc_page_content_font_1 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #053478;
+}
+
+@media (max-width: 768px) {
+    .title_title_tnc_page_content_font_1 {
+        font-family: 'Inter', sans-serif;
+        font-size: 1rem;
+        font-weight: 600;
+        color: #053478;
+    }
+}
+
+.title_title_tnc_page_content_font_2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #2466B3;
+}
+
+@media (max-width: 768px) {
+    .title_title_tnc_page_content_font_2 {
+        font-family: 'Inter', sans-serif;
+        font-size: 0.9rem;
+        font-weight: 400;
+        color: #2466B3;
+    }
+}

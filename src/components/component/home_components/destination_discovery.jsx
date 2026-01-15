@@ -40,7 +40,7 @@ function DestinationDiscovery() {
                 </div>
                 <div className="destination_discovery_content">
                     <Link to="/" className="no-highlight">
-                        <div className="destination_discovery_content_individual destination_discovery_content_no_show_on_mobile">
+                        <div className="destination_discovery_content_individual">
                             <img
                                 src={destination_discovery_image_1}
                                 alt="destination discovery"
@@ -66,7 +66,7 @@ function DestinationDiscovery() {
                         </div>
                     </Link>
                     <Link to="/" className="no-highlight">
-                        <div className="destination_discovery_content_individual destination_discovery_content_no_show_on_mobile">
+                        <div className="destination_discovery_content_individual">
                             <img
                                 src={destination_discovery_image_3}
                                 alt="destination discovery"
@@ -79,7 +79,7 @@ function DestinationDiscovery() {
                         </div>
                     </Link>
                     <Link to="/" className="no-highlight">
-                        <div className="destination_discovery_content_individual">
+                        <div className="destination_discovery_content_individual destination_discovery_content_no_show_on_mobile">
                             <img
                                 src={destination_discovery_image_4}
                                 alt="destination discovery"
@@ -105,7 +105,7 @@ function DestinationDiscovery() {
                         </div>
                     </Link>
                     <Link to="/" className="no-highlight">
-                        <div className="destination_discovery_content_individual">
+                        <div className="destination_discovery_content_individual destination_discovery_content_no_show_on_mobile">
                             <img
                                 src={destination_discovery_image_6}
                                 alt="destination discovery"
