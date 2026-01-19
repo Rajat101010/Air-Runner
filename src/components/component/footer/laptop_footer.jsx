@@ -21,32 +21,32 @@ function LaptopFooter() {
                         </div>
                         <div className='footer_laptop_individual_description'>
                             <font className='laptop_footer_description'>
-                                <Link to="/" className="no-highlight laptop_footer_description">
+                                <Link to="/about-us/company-overview" className="no-highlight laptop_footer_description">
                                     Company Overview
                                 </Link>
                             </font>
                             <font className='laptop_footer_description'>
-                                <Link to="/" className="no-highlight laptop_footer_description">
+                                <Link to="/about-us/fleet-information" className="no-highlight laptop_footer_description">
                                     Fleet Information
                                 </Link>
                             </font>
                             <font className='laptop_footer_description'>
-                                <Link to="/" className="no-highlight laptop_footer_description">
+                                <Link to="/about-us/cargo-information" className="no-highlight laptop_footer_description">
                                     Cargo Information
                                 </Link>
                             </font>
                             <font className='laptop_footer_description'>
-                                <Link to="/" className="no-highlight laptop_footer_description">
+                                <Link to="/about-us/crew-members" className="no-highlight laptop_footer_description">
                                     Crew Members
                                 </Link>
                             </font>
                             <font className='laptop_footer_description'>
-                                <Link to="/" className="no-highlight laptop_footer_description">
+                                <Link to="/about-us/safety-standards" className="no-highlight laptop_footer_description">
                                     Safety Standards
                                 </Link>
                             </font>
                             <font className='laptop_footer_description'>
-                                <Link to="/" className="no-highlight laptop_footer_description">
+                                <Link to="/about-us/recognization" className="no-highlight laptop_footer_description">
                                     Recognization
                                 </Link>
                             </font>

@@ -249,7 +249,7 @@ medium
 
 .holiday_mini_screen_discount_code_code_font {
     font-family: 'Inter', sans-serif;
-    font-size: 5rem;
+    font-size: 4rem;
     font-weight: 900;
     color: #6A9FE0;
 }
@@ -659,4 +659,60 @@ medium
     font-size: 0.8rem;
     font-weight: 400;
     color: #053478;
+}
+
+.company_bluff_title_font {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #6A9FE0;
+}
+
+@media (max-width: 768px) {
+    .company_bluff_title_font {
+        font-family: 'Inter', sans-serif;
+        font-size: 1rem;
+        font-weight: 600;
+        color: #6A9FE0;
+    }
+}
+
+.company_bluff_font {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #2466B3;
+}
+
+.about_us_page_company_name_font {
+    font-family: 'Inter', sans-serif;
+    font-size: 3rem;
+    font-weight: 600;
+    color: #053478;
+}
+
+@media (max-width: 768px) {
+    .about_us_page_company_name_font {
+        font-family: 'Inter', sans-serif;
+        font-size: 2rem;
+        font-weight: 600;
+        color: #053478;
+    }
+}
+
+.company_small_info_font {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #2466B3;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .company_small_info_font {
+        font-family: 'Inter', sans-serif;
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: #2466B3;
+    }
 }

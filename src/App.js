@@ -24,6 +24,14 @@ import Support from './main_pages/support/support';
 import TermsAndConditions from './main_pages/t-&-c/t-&-c';
 import Policy from './main_pages/policy/policy';
 
+//about pages
+import CompanyOverview from './main_pages/about-us/company_overview';
+import FleetInformation from './main_pages/about-us/fleet_information';
+import CargoInformation from './main_pages/about-us/cargo_information';
+import CrewMembers from './main_pages/about-us/crew_members';
+import SafetyStandards from './main_pages/about-us/safety_standards';
+import Recognization from './main_pages/about-us/recognization';
+
 function App() {
 
   return (
@@ -45,6 +53,15 @@ function App() {
           <Route path='/support' element={<Support />} />
           <Route path='/t-&-c' element={<TermsAndConditions />} />
           <Route path='/policy' element={<Policy />} />
+
+          {/* about-us */}
+          <Route path='/about-us/company-overview' element={<CompanyOverview />} />
+          <Route path='/about-us/fleet-information' element={<FleetInformation />} />
+          <Route path='/about-us/cargo-information' element={<CargoInformation />} />
+          <Route path='/about-us/crew-members' element={<CrewMembers />} />
+          <Route path='/about-us/safety-standards' element={<SafetyStandards />} />
+          <Route path='/about-us/recognization' element={<Recognization />} />
+
 
           {/* <Route path="/days" element={<Navigate to={`/${days}`} />} /> */}
         </Routes>

@@ -146,7 +146,7 @@ function AboutUS() {
                     </div>
                 </div>
                 <div className="our_expertise__page_content">
-                    <Link to="/" className="no-highlight">
+                    <Link to="/about-us/company-overview" className="no-highlight">
                         <div className="our_expertise_content_individual no-highlight">
                             <img
                                 src={about_image_1}
@@ -159,7 +159,7 @@ function AboutUS() {
                             </font>
                         </div>
                     </Link>
-                    <Link to="/" className="no-highlight">
+                    <Link to="/about-us/fleet-information" className="no-highlight">
                         <div className="our_expertise_content_individual no-highlight">
                             <img
                                 src={about_image_2}
@@ -172,7 +172,7 @@ function AboutUS() {
                             </font>
                         </div>
                     </Link>
-                    <Link to="/" className="no-highlight">
+                    <Link to="/about-us/cargo-information" className="no-highlight">
                         <div className="our_expertise_content_individual no-highlight">
                             <img
                                 src={about_image_3}
@@ -185,7 +185,7 @@ function AboutUS() {
                             </font>
                         </div>
                     </Link>
-                    <Link to="/" className="no-highlight">
+                    <Link to="/about-us/crew-members" className="no-highlight">
                         <div className="our_expertise_content_individual no-highlight">
                             <img
                                 src={about_image_4}
@@ -198,7 +198,7 @@ function AboutUS() {
                             </font>
                         </div>
                     </Link>
-                    <Link to="/" className="no-highlight">
+                    <Link to="/about-us/safety-standards" className="no-highlight">
                         <div className="our_expertise_content_individual no-highlight">
                             <img
                                 src={about_image_5}
@@ -211,7 +211,7 @@ function AboutUS() {
                             </font>
                         </div>
                     </Link>
-                    <Link to="/" className="no-highlight">
+                    <Link to="/about-us/recognization" className="no-highlight">
                         <div className="our_expertise_content_individual no-highlight">
                             <img
                                 src={about_image_6}
