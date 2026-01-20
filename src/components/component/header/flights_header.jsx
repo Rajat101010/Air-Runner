@@ -41,17 +41,19 @@ function HomeHeader() {
     return (
         <main>
             <div className="header_parent">
-                <div className='header_app_name'>
-                    <img
-                        src={LogoTransparent}
-                        alt="logo"
-                        className='logo_header'
-                        loading="lazy"
-                    />
-                    <font className='font_app_name'>
-                        Air Runner
-                    </font>
-                </div>
+                <Link to="/" className="no-highlight">
+                    <div className='header_app_name'>
+                        <img
+                            src={LogoTransparent}
+                            alt="logo"
+                            className='logo_header'
+                            loading="lazy"
+                        />
+                        <font className='font_app_name'>
+                            Air Runner
+                        </font>
+                    </div>
+                </Link>
 
                 <div className='header_icons'>
                     <div className='header_icons_pages'>
